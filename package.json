@@ -1,20 +1,29 @@
 {
-  "name": "bot.js",
+  "name": "bot",
   "version": "1.0.0",
-  "description": "",
+  "description": "More discord bot stuff.",
   "main": "bot.js",
-  "scripts": {
-
-      "start": "node bot.js"
-  
-    },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "discord.js": "^11.4.2",
     "enmap": "^4.8.2",
     "node-dori": "^2.0.2",
     "superagent": "^4.0.0-beta.5",
     "xmlhttprequest": "^1.8.0"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stargazingx13/botgazing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stargazingx13/botgazing/issues"
+  },
+  "homepage": "https://github.com/stargazingx13/botgazing#readme"
 }
