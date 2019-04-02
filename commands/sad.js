@@ -19,7 +19,7 @@ i[13] = `This is so sad, can we finish Pirate Killing Games's maps?`;
 i[14] = `This is so sad, can we drop Aidan's DS?`;
 i[15] = `This is so sad, host a VC party.`;
 
-var j = Math.round(Math.random() * 6);
+var j = Math.round(Math.random() * 15);
 
 message.channel.send(`${i[j]}`);
 };
