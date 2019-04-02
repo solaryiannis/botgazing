@@ -36,4 +36,4 @@ commandfile.run(bot, message, args);
 
 });
 
-bot.login();
+bot.login(process.env.CLIENT_TOKEN);
