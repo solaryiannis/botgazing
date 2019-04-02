@@ -72,6 +72,3 @@ jspm_packages
 
 # Yarn Integrity file
 .yarn-integrity
-
-# Heroku Env
-.env
