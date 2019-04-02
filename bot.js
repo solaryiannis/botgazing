@@ -3,7 +3,7 @@ const bot = new Discord.Client();
 const fs = require('fs');
 const Enmap = require('enmap');
 
-const prefix = "?";
+const prefix = "%";
 
 bot.commands = new Discord.Collection();
 
@@ -19,7 +19,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on ("ready", () => {
 console.log(`spiderman 2 pizza theme`);
-bot.user.setActivity('?help');
+bot.user.setActivity('%help');
 });
 
 bot.on ("message", message => {
