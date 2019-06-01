@@ -3,7 +3,7 @@ module.exports.run = async (bot, message, args) => {
     const superagent = require ("superagent");
 
     let {body} = await superagent
-    .get(`http://random.birb.pw/tweet.json/`);
+    .get(`http://random.birb.pw/tweet.json`);
     if (!{body}) return message.channel.send("File not generated. Please try again!");
 
     const embed = new Discord.RichEmbed()
