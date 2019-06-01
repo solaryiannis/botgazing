@@ -19,9 +19,24 @@ module.exports.run = (bot, message, args) => {
     i[14] = `But, I never taught you to lie. That’s why you’re so bad at it.`;
     i[15] = `You should choose your words wisely.`;
     i[16] = `The hardest choices require the strongest wills.`;
-    i[17] = `Stark… you have my respect. I hope the people of Earth will remember you.`;
+    i[17] = `Stark... you have my respect. I hope the people of Earth will remember you.`;
+    i[18] = `You could not live with your own failure, and where did that bring you? Back to me.`;
+    i[19] = `I am inevitable.`;
+    i[20] = `I thought by eliminating half of life, the other half would thrive, but you have shown me that's impossible.`;
+    i[21] = `As long as there are those that remember what was, there will always be those, that are unable to accept what can be. They will resist.`;
+    i[22] = `I don't even know who you are.`;
+    i[23] = `It is not what is lost but only what it is been given... a grateful universe.`;
+    i[24] = `I used the stones to destroy the stones.`;
+    i[25] = `I will shred this universe down to it's last atom and then, with the stones you've collected for me, create a new one.`;
+    i[26] = `In all my years of conquest, violence, slaughter, it was never personal.`;
+    i[27] = `I'll tell you now, what I'm about to do to your stubborn, annoying little planet... I'm gonna enjoy it. Very, very much.`;
+    i[28] = `It nearly killed me, but the work is done. It always will be.`;
+    i[29] = `You should be grateful.`;
+    i[29] = `Avengers... Unloyal wretches.`;
+    i[30] = `I'm thankful. Because now I know what I must do.`;
+    i[31] = `They'll never know. Because you won't be alive to tell them.`;
     
-    var j = Math.round(Math.random() * 17);
+    var j = Math.round(Math.random() * 31);
     
     message.channel.send(`${i[j]}`);
     };
