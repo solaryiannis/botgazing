@@ -78,11 +78,11 @@ module.exports.run = (bot, message, args) => {
         return ['💜', '💚', '🖤'].includes(reaction.emoji.name) && user.id === message.author.id;
     };
 
-    message.channel.send(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the ❤️ reaction for **Mario Arcana**.`).then(message => {
-        if (message.guild.id == '450088547857465349') {
-            message.edit(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the ❤️ reaction for **Mario Arcana**.\nPress the 🖤 reaction for **Bunker Arcana**.`);
-        }
+    message.channel.send(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the 💚 reaction for **Mario Arcana**.`).then(message => {
         message.delete(30000)
+        if (message.guild.id == '450088547857465349') {
+            message.edit(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the 💚 reaction for **Mario Arcana**.\nPress the 🖤 reaction for **Bunker Arcana**.`);
+        }
       });
         message.react("💜").catch(console.error);
         message.react("💚").catch(console.error);
