@@ -21,23 +21,23 @@ module.exports.run = (bot, message, args) => {
         fields: [
             {
                 name: "Bot User",
-                value: `${userMember.bot}`
+                value: userMember.bot
             },
             {
                 name: "Presence",
-                value: `${memberUser.presence.status}`
+                value: memberUser.presence.status
             },
             {
                 name: "Account Created",
-                value: `${new Date(userMember.createdTimestamp)}`
+                value: new Date(userMember.createdTimestamp)
             },
             {
                 name: "Server Joined",
-                value: `${new Date(memberUser.joinedTimestamp)}`
+                value: new Date(memberUser.joinedTimestamp)
             },
             {
                 name: `Roles (${memberUser.roles.size})`,
-                value: `${memberUser.roles.map(role => role.name).join(", ")}`
+                value: memberUser.roles.map(role => role.name).join(", ")
             }
         ],
         timestamp: new Date(),

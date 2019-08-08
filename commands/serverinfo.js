@@ -14,19 +14,19 @@ module.exports.run = (bot, message, args) => {
         },
         {
             name: "Creation Date",
-            value: `${new Date(message.guild.createdTimestamp)}`
+            value: new Date(message.guild.createdTimestamp)
         },
         {
             name: "Region",
-            value: `${message.guild.region}`
+            value: message.guild.region
         },
         {
             name: "Channels",
-            value: `${message.guild.channels.size}`
+            value: message.guild.channels.size
         },
         {
             name: "Roles",
-            value: `${message.guild.roles.size} roles`
+            value: `${message.guild.roles.size} roles. To see all role names, use "%rolelist"!`
         }
         ],
         timestamp: new Date(),
