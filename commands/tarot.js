@@ -3,76 +3,108 @@ module.exports.run = (bot, message, args) => {
     var k = [];
     var l = [];
     
-    i[0] = `0 - The Fool`;
-    i[1] = `I - The Magician`;
-    i[2] = `II - The High Priestess`;
-    i[3] = `III - The Empress`;
-    i[4] = `IV - The Emperor`;
-    i[5] = `V - The Hierophant`;
-    i[6] = `VI - The Lovers`;
-    i[7] = `VII - The Chariot`;
-    i[8] = `VIII - Justice`;
-    i[9] = `IX - The Hermit`;
-    i[10] = `X - Wheel of Fortune`;
-    i[11] = `XI - Strength`;
-    i[12] = `XII - The Hanged Man`;
-    i[13] = `XIII - Death`;
-    i[14] = `XIV - Temperance`;
-    i[15] = `XV - The Devil`;
-    i[16] = `XVII - The Tower`;
-    i[17] = `XVII - The Star`;
-    i[18] = `XVIII - The Moon`;
-    i[19] = `XIX - The Sun`;
-    i[20] = `XX - Judgement`;
-    i[21] = `XXI - The World`;
+    i[0] = `0 - Aidan`;
+    i[1] = `I - Makena`;
+    i[2] = `II - Finn`;
+    i[3] = `III - Star`;
+    i[4] = `IV - Jaden`;
+    i[5] = `V - Pitohui`;
+    i[6] = `VI - Zange and Spooks`;
+    i[7] = `VII - Setellite Lovers`;
+    i[8] = `VIII - Otter Chat`;
+    i[9] = `IX - Nick`;
+    i[10] = `X - The Rate Command`;
+    i[11] = `XI - Shygul`;
+    i[12] = `XII - Mariofan`;
+    i[13] = `XIII - Raregold's Everyone Ping`;
+    i[14] = `XIV - Aidan and Finn over Finn's Smash roster`;
+    i[15] = `XV - Roller`;
+    i[16] = `XVI - Aidan's Domain`;
+    i[17] = `XVII - Botgazing`;
+    i[18] = `XVIII - Gacha`;
+    i[19] = `XIX - #general`;
+    i[20] = `XX - Bunker Bliss`;
+    i[21] = `XXI - The Bunker`;
 
-    k[0] = `Life is signalling a new beginning for you. Your spirit is free, but you may still be lost, unsure of where to truly go in your journey. Trust yourself when your heart tells you where it wants to go, and open your mind to any new possibilities.`;
-    k[1] = `Your talents have gotten to you where you are today, and may help you right now. Focus on what you are really good on, and use it to help your weak points. Do not hold back your full potential.`;
-    k[2] = `Intuition is a current guiding force. While this intuition may mean that you have ascended into feeling divine, it does not have to. Combine it with the knowledge of what is sacred to you, and you will go very far at this point in your life.`;
-    k[3] = `Your spirit is in touch with the femininity in your life. Focus on the beautiful things, items that are in nature and have captivated your attention. Keeping everything in balance will help your spirit flourish.`;
-    k[4] = `Your life right now is very structured, with you taking charge of it. If you are unsure of how to maintain this structure, you may need someone in your life to help guide you, perhaps a fatherly figure. Whoever this is is someone you can rely on to keep the established balance.`;
-    k[5] = `The spiritual harmony you possess will help guide you. Whenever times seem tough, or you are unsure, fall back on what you believe in. Your faith will lead you to where you need to be.`;
-    k[6] = `Love is in the air for you, even if there is no one there. Your bonds with others you do know may be strengthening. Use this time to rekindle the love for yourself, and be around those you care about most.`;
-    k[7] = `In your current situation, you are very in control and determined to get to an end result. Your willpower ensures you can get a lot done, however, do not burn yourself out. It is okay to not get the result immediately, but know that you can.`;
-    k[8] = `What you want the most in your current situation is justice, and it is soon to arrive. Do not lose hope in it, for true justice may not be immediate. Hold onto your heart, and you will soon find the answer.`;
-    k[9] = `You may be internally lost, unsure of your wants, needs, or desires. Finding your way may be tough, but it is something you are capable of doing. If your heart feels unsure, help guide it and it will know what it wants soon afterward.`;
-    k[10] = `Your life is soon to turn. Whatever point you are at in life, do not fight any change. Let it come to you in harmony, and enlighten you.`;
-    k[11] = `If you are at a negative point in life, you have the strength within yourself to overcome. The willpower may be hard to find, so take your time to channel the energy to need to harness your strength. Hang in there, and you will be able to reach your goal.`;
-    k[12] = `There may be a current situation in your life that hurts you to let go of, and is painful to remember. This is hard to do, but it is key to recovery. Allow yourself to surrender to your feelings before fully letting go of it.`;
-    k[13] = `Something in your life has come to an end, and you may feel scared, alone, and unsure of where to go. Endings, however, lead to beginnings. Guide yourself through the end to let yourself see the hopeful light of the new.`;
-    k[14] = `Life is currently at an unbalanced state. Finding your inner balance is key, but it may be hard to accomplish in these extremes. Stray away from the extremes, and take the middle road.`;
-    k[15] = `You may be seducted by addiction, pleasures, and the material world. While these things are not bad, take caution in what you agree to. Always check up on your personal and business affairs, and make sure they have not been swayed.`;
-    k[16] = `Sudden change may be happening. In your time of chaos, take extra care in reaching out and recognizing signs of danger or anything that may negatively affect you. Carefully navigating this path will lead to eventual positive liberation.`;
-    k[17] = `You may find yourself with rekindled hope and faith. The universe is in a good alignment for your spiritual inspirement. This renewed hope will help you prosper in the coming moments.`;
-    k[18] = `You may have failed to properly understand a situation, or may be being misguided. Take a step back, and properly rejudge a situation. There may even be something you are too scared to admit to yourself.`;
-    k[19] = `You are on a good path to success. This path you are wandering has good fortunes and intentions. If you find yourself in doubt, always try and keep yourself moving forward.`;
-    k[20] = `An absolute is being reached, with a resurrection and awakening imminent. The end of something may soon be approaching, but do not be scared of it. A dynamic new beginning is soon in place, and the result of this beginning may be from how you have been spiritually judged.`;
-    k[21] = `Life exists in cycles, and one cycle may soon be ending. Every cycle end has a pause before the next one. Use this pause wisely, reflect on what you have done in the past, and use your experiences to do better in the new cycle.`;
+    k[0] = `0 - Waluigi`;
+    k[1] = `I - Prince Mallow`;
+    k[2] = `II - Rosalina`;
+    k[3] = `III - Peach Toadstool`;
+    k[4] = `IV - Bowser Koopa`;
+    k[5] = `V - Merlon`;
+    k[6] = `VI - Blumiere and Timpani`;
+    k[7] = `VII - Iggy Koopa`;
+    k[8] = `VIII - Twink`;
+    k[9] = `IX - Kamek`;
+    k[10] = `X - ? Block`;
+    k[11] = `XI - Queen Jaydes`;
+    k[12] = `XII - Luvbi`;
+    k[13] = `XIII - The Dark Star`;
+    k[14] = `XIV - Starlow`;
+    k[15] = `XV - Dimentio`;
+    k[16] = `XVI - The Thousand-Year Door`;
+    k[17] = `XVII - The Star Spirits`;
+    k[18] = `XVIII - Twila`;
+    k[19] = `XIX - Brighton`;
+    k[20] = `XX - The Void and Chaos Heart`;
+    k[21] = `XXI - Grand Finale Galaxy`;
+
+    l[0] = `0 - The Fool`;
+    l[1] = `I - The Magician`;
+    l[2] = `II - The High Priestess`;
+    l[3] = `III - The Empress`;
+    l[4] = `IV - The Emperor`;
+    l[5] = `V - The Hierophant`;
+    l[6] = `VI - The Lovers`;
+    l[7] = `VII - The Chariot`;
+    l[8] = `VIII - Justice`;
+    l[9] = `IX - The Hermit`;
+    l[10] = `X - Wheel of Fortune`;
+    l[11] = `XI - Strength`;
+    l[12] = `XII - The Hanged Man`;
+    l[13] = `XIII - Death`;
+    l[14] = `XIV - Temperance`;
+    l[15] = `XV - The Devil`;
+    l[16] = `XVI - The Tower`;
+    l[17] = `XVII - The Star`;
+    l[18] = `XVIII - The Moon`;
+    l[19] = `XIX - The Sun`;
+    l[20] = `XX - Judgement`;
+    l[21] = `XXI - The World`;
+
     
-    l[0] = `Teleport to the starting room of a floor.`;
-    l[1] = `Gain temporary homing tears.`;
-    l[2] = `Summon Mom's leg.`;
-    l[3] = `Gain temporary damage and speed.`;
-    l[4] = `Teleport to the boss room of a floor.`;
-    l[5] = `Spawn 2 blue hearts.`;
-    l[6] = `Spawn 2 red hearts.`;
-    l[7] = `Gain very temporary invulnerability.`;
-    l[8] = `Spawn 1 heart, 1 key, 1 bomb, and 1 coin.`;
-    l[9] = `Teleport to the shop of a floor.`;
-    l[10] = `Spawn 1 arcade machine.`;
-    l[11] = `Gain damage, range, speed, tear height, size, and a heart container.`;
-    l[12] = `Gain temporary flight and body loss.`;
-    l[13] = `Deal damage to all enemies.`;
-    l[14] = `Spawn 1 blood donation machine.`;
-    l[15] = `Gain temporary damage.`;
-    l[16] = `Spawn 6 exploding bombs.`;
-    l[17] = `Teleport to the treasure room of a floor.`;
-    l[18] = `Teleport to the secret room of a floor.`;
-    l[19] = `Fully restore red health and deal damage to all enemies.`;
-    l[20] = `Spawn 1 beggar.`;
-    l[21] = `Reveal the entire map.`;
 
     var j = Math.round(Math.random() * 21);
-    
-    message.channel.send(`You have pulled **${i[j]}**.\n${k[j]}\n\n*The Binding of Isaac: Rebirth*\n${l[j]}`);
+
+
+    message.channel.send(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the ❤️ reaction for **Mario Arcana**.`).then(message => {
+        if (message.guild.id == '450088547857465349') {
+            message.edit(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the ❤️ reaction for **Mario Arcana**.\nPress the 🖤 reaction for **Bunker Arcana**.`);
+        }
+        message.delete(30000)
+      });
+        message.react("💜").catch(console.error);
+        message.react("❤️").catch(console.error);
+        if (message.guild.id == '450088547857465349') {
+        message.react("🖤").catch(console.error);
+        }
+        message.awaitReactions(filter, {max: 1, time: 30000, errors: ['time'] })
+        .then(collected => {
+          const reaction = collected.first();
+          if (reaction.emoji.name === '💜') {
+        message.channel.send(`You have pulled **${l[j]}**.`);
+        else if (reaction.emoji.name === '❤️') {
+            message.channel.send(`You have pulled **${k[j]}**.`);
+          }
+          else if (reaction.emoji.name === '🖤') {
+            message.channel.send(`You have pulled **${i[j]}**.`);
+          }
+      })
+      .catch(collected => {
+        message.channel.send(`${message.author.username}, the action timed out.`).then(message => {
+          message.delete(15000)
+        });
+      }).catch(e => {
+          console.error(e);
+        });
     };
