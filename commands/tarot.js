@@ -72,10 +72,11 @@ module.exports.run = (bot, message, args) => {
     l[20] = `XX - Judgement`;
     l[21] = `XXI - The World`;
 
-    
-
     var j = Math.round(Math.random() * 21);
 
+    const filter = (reaction, user) => {
+        return ['💜', '❤️', '🖤'].includes(reaction.emoji.name) && user.id === message.author.id;
+    };
 
     message.channel.send(`Ask the desk a question. This could be out loud, or in your head. When you have something you would like the answer to:\nPress the 💜 reaction for **Major Arcana**.\nPress the ❤️ reaction for **Mario Arcana**.`).then(message => {
         if (message.guild.id == '450088547857465349') {
