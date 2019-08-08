@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
         },
         {
             name: "Creation Date",
-            value: new Date(message.guild.createdTimestamp)
+            value: new Date(message.guild.createdTimestamp).getTimezoneOffset()
         },
         {
             name: "Region",

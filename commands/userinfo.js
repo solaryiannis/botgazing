@@ -29,11 +29,11 @@ module.exports.run = (bot, message, args) => {
             },
             {
                 name: "Account Created",
-                value: new Date(userMember.createdTimestamp)
+                value: new Date(userMember.createdTimestamp).getTimezoneOffset()
             },
             {
                 name: "Server Joined",
-                value: new Date(memberUser.joinedTimestamp)
+                value: new Date(memberUser.joinedTimestamp).getTimezoneOffset()
             },
             {
                 name: `Roles (${memberUser.roles.size})`,
