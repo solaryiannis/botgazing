@@ -93,7 +93,8 @@ module.exports.run = (bot, message, args) => {
           const reaction = collected.first();
           if (reaction.emoji.name === '💜') {
         message.channel.send(`You have pulled **${l[j]}**.`);
-        else if (reaction.emoji.name === '❤️') {
+          }
+            else if (reaction.emoji.name === '❤️') {
             message.channel.send(`You have pulled **${k[j]}**.`);
           }
           else if (reaction.emoji.name === '🖤') {
