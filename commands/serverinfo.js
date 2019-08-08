@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
         },
         {
             name: "Creation Date",
-            value: `${message.guild.createdAt}`
+            value: `${new Date(message.guild.createdTimestamp)}`
         },
         {
             name: "Region",

@@ -29,11 +29,11 @@ module.exports.run = (bot, message, args) => {
             },
             {
                 name: "Account Created",
-                value: `${userMember.createdAt}`
+                value: `${new Date(userMember.createdTimestamp)}`
             },
             {
                 name: "Server Joined",
-                value: `${memberUser.joinedAt}`
+                value: `${new Date(memberUser.joinedTimestamp)}`
             },
             {
                 name: `Roles (${memberUser.roles.size})`,
