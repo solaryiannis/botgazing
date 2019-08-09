@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
     };
 
     module.exports.config = {
-      n: "kinkshame",,
+      n: "kinkshame",
       a: ["ks", "shame"],
       d: "For when the kinks are just too much.",
       u: "Mention a user and type why you're shaming them. The user will find out they've been shamed.",
