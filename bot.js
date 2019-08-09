@@ -16,7 +16,7 @@ const commandFiles = fs.readdirSync('./commands').filter(f => f.endsWith('.js'))
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-	bot.commands.set(command.name, command);
+	bot.commands.set(command.n, command);
 }
 
 bot.on ("message", async message => {
