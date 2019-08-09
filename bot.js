@@ -35,7 +35,7 @@ if(!message.content.startsWith(prefix)) return;
 
 const args = message.content.split(" ").slice(1);
 let cmd = message.content.split(" ")[0];
-let commandfile = bot.commands.get(bot.n.get(cmd.slice(prefix.length))) || bot.commands.get(bot.a.get(cmd.slice(prefix.length)));
+let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)));
 
 if(commandfile) {
 commandfile.run(bot, message, args);
