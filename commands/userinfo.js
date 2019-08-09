@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'userinfo',
+	a: ['userinfo', 'uinfo'],
+    d: 'Gets the current user\'s (or your) info.',
+    u: '%userinfo or %userinfo <user>',
+	execute(message, args) {
     var userMember;
 
     if (message.mentions.users.size === 0) {
@@ -12,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
         memberUser = message.mentions.members.first();
     }
     
-    await message.channel.send({embed: {
+    message.channel.send({embed: {
         color: memberUser.displayColor,
         author: {
           name: `${userMember.tag} (${userMember.id})`,
@@ -49,13 +54,5 @@ module.exports.run = async (bot, message, args) => {
         }
       }
     });
-    }
-
-    module.exports.config = {
-        n: "userinfo",
-        a: ["uinfo"],
-        d: "Get the mentioned user's (or your) info.",
-        u: "Get the requested embed, with a bit of info.",
-        ab: "All Users",
-        s: "%userinfo"
-      }
+},
+};

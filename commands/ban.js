@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'ban',
+	a: ['ban', 'b', 'hammer', 'banhammer'],
+    d: 'For those who have you at your wits end.',
+    u: '%ban <user> <reason>',
+	execute(message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
   message.delete(30000).catch(console.error);
@@ -49,13 +54,5 @@ module.exports.run = async (bot, message, args) => {
     }).catch(e => {
         console.error(e);
       });
-    }
-
-    module.exports.config = {
-      n: "ban",
-      a: ["b"],
-      d: "For those who have you at your wits end.",
-      u: "Follow this command with a mention, and you'll be prompted to ban them.",
-      ab: "Users with ban permissions",
-      s: "%ban @Troublemaker"
-  }
+	},
+};

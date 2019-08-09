@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'warn',
+	a: ['warn', 'w'],
+    d: 'For people who aren\'t quite too far gone.',
+    u: '%warn <user> <reason>',
+	execute(message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
   
@@ -10,15 +15,7 @@ module.exports.run = async (bot, message, args) => {
     if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS") || !message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return;
   
       message.delete(1).catch(console.error);
-      await warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
-      await message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
-    }
-
-    module.exports.config = {
-      n: "warn",
-      a: ["w"],
-      d: "For people who aren't quite too far gone.",
-      u: "Warns the mention user for the reason after it.",
-      ab: "Users with ban or kick permissions.",
-      s: "%warn @Troublemaker for being troublesome"
-    }
+      warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
+      message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
+	},
+};

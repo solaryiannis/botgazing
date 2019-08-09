@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'bird',
+	a: ['bird', 'birb', 'kotori'],
+  d: 'Sometimes, all you need to cheer up are feathers.',
+  u: '%bird',
+	execute(message, args) {
     const superagent = require ("superagent");
 
     let {body} = await superagent
@@ -13,13 +18,5 @@ module.exports.run = async (bot, message, args) => {
     .setImage(body.link)
  
   message.channel.send({embed});
-}
-
-module.exports.config = {
-  n: "bird",
-  a: ["birb", "kotori"],
-  d: "Sometimes, all you need to cheer up are feathers.",
-  u: "Get presented with a randomly generated image of a bird.",
-  ab: "All Users",
-  s: "%bird"
-}
+	},
+};

@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'kick',
+	a: ['kick', 'k', 'boot', 'b'],
+    d: 'For those who have you at your wits end.',
+    u: '%kick <user> <reason>',
+	execute(message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
     message.delete(3000).catch(console.error);
@@ -50,13 +55,5 @@ module.exports.run = async (bot, message, args) => {
     }).catch(e => {
         console.error(e);
       });
-    }
-
-    module.exports.config = {
-      n: "kick",
-      a: ["k"],
-      d: "For those who have you at your wits end.",
-      u: "Follow this command with a mention, and you'll be prompted to kick them.",
-      ab: "Users with kick permissions",
-      s: "%kick @Troublemaker"
-  }
+	},
+};

@@ -1,6 +1,10 @@
 const Discord = require('discord.js');
-
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'positive',
+	a: ['positive', 'positivity', 'happy', 'smile'],
+    d: 'When you're feeling sad...',
+    u: '%positive',
+	execute(message, args) {
     var i = [];
     
     i[0] = `No matter what happened today, there are still people behind you that support you.`;
@@ -18,15 +22,6 @@ module.exports.run = async (bot, message, args) => {
     
     var j = Math.round(Math.random() * 11);
     
-    await message.channel.send(`${i[j]}`);
-    }
-
-    module.exports.config = {
-        n: "positive",
-        na: "N/A",
-        a: [],
-        d: "When you're feeling sad...",
-        u: "Sends a pick-me-up.",
-        ab: "All Users",
-        s: "%positive"
-      }
+    message.channel.send(`${i[j]}`);
+  },
+};

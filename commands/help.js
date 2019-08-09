@@ -1,58 +1,47 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
-    if (args == 'help' || !args) {
-        await message.channel.send('**Info Commands**```gmt, help, m-help, rolelist, servericon, serverinfo, usericon, userinfo```**Math Commands**```add, subtract, multiply, divide```**Other Commands**```bird, cat, coin, dog, roll, snap, tarot```');
-        if (message.guild.id === '450088547857465349') {
-            await message.channel.send("**Bunker Commands** ```kinkshame, mod-me, sad, say, thanosquote```");
+module.exports = {
+	n: 'help',
+	a: ['help', 'h', 'command', 'commands', 'c'],
+    d: 'It\'s time to help!",
+    u: '%help or %help <command>',
+	execute(message, args) {
+        const { commands } = message.bot;
+        if (!args.length) {
+            message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\n\nFor help with a specific command, type \`$help <command>\`!`);
         }
-    }
-    if (args) {
-        let cmd = args;
-        if (bot.commands.has(cmd)) {
-            cmd = bot.commands.get(cmd);
-            await message.channel.send({embed: {
-                color: 0x000000,
-                author: {
-                  name: `${message.author.username} requested help!`,
-                  icon_url: message.author.avatarURL
-                },
-                title: "Command Name (Aliases)",
-                description: `${cmd.config.n} (${cmd.config.na || cmd.config.a})`,
-                fields: [
-                {
-                    name: "Description",
-                    value: cmd.config.d
-                },
-                {
-                    name: "Usage",
-                    value: cmd.config.u
-                },
-                {
-                    name: "Accessable By",
-                    value: cmd.config.ab
-                },
-                {
-                    name: "Sample Input",
-                    value: cmd.config.s
-                }
-                ],
-                timestamp: new Date(),
-                footer: {
-                  icon_url: bot.user.avatarURL,
-                  text: `I'm ${bot.user.tag}!`
-                }
-              }
-            });
-        }
-    }
-}
 
-module.exports.config = {
-    n: "help",
-    a: ["h", "halp"],
-    d: "You shouldn't be viewing this.",
-    u: "Something's gone wrong if you have.",
-    ab: "All Users",
-    s: "%help"
-  }
+        const name = args[0].toLowerCase();
+        const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
+
+        if (!command) {
+	        return message.reply('That\'s not a valid command...');
+        }
+
+        message.channel.send({embed: {
+            color: 0x000000,
+            author: {
+              name: `${message.author.username} requested help!`,
+              icon_url: message.author.avatarURL
+            },
+            title: "Command Name (Aliases)",
+            description: `${command.n} (${command.a.join(', ')})`,
+            fields: [
+            {
+                name: "Description",
+                value: command.d
+            },
+            {
+                name: "Usage",
+                value: command.u
+            },
+            ],
+            timestamp: new Date(),
+            footer: {
+              icon_url: bot.user.avatarURL,
+              text: `I'm ${bot.user.tag}!`
+            }
+          }
+        });
+	},
+};
