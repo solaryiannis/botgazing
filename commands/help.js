@@ -11,7 +11,7 @@ module.exports = {
             message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\n\nFor help with a specific command, type \`$help <command>\`!`);
         }
 
-        const name = args[0].toLowerCase();
+        const name = args.toLowerCase()
         const command = commands.get(name) || commands.find(c => c.aliases && c.aliases.includes(name));
 
         if (!command) {
