@@ -41,6 +41,10 @@ module.exports = {
                 name: "Permissions",
                 value: new Discord.Permissions(findRole.permissions).toArray().join(", ")
             },
+            {
+                name: "Members",
+                value: findRole.members.toArray().join(", ")
+            },
             ],
             timestamp: new Date(),
             footer: {
