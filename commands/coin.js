@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     var i = [];
     
     i[0] = `Heads`;

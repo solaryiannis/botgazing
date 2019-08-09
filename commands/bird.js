@@ -1,5 +1,3 @@
-const Discord = require('discord.js');
-
 module.exports.run = async (bot, message, args) => {
     const Discord = require('discord.js');
     const superagent = require ("superagent");

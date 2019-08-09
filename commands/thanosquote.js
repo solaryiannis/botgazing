@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     if (message.guild.id != '450088547857465349') return;
     var i = [];
     

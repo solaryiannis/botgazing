@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
 
     var colour = [];
     colour [0] = `white`;

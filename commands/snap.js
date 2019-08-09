@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     var num = Math.round((Math.random() * 2) + 1);
     if (num === 1) {
         message.react("✅").catch(console.error);

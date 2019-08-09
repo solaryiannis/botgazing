@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     if (args == 'help' || !args) {
         message.channel.send('**Info Commands**```gmt, help, m-help, rolelist, servericon, serverinfo, usericon, userinfo```**Math Commands**```add, subtract, multiply, divide```**Other Commands**```bird, cat, coin, dog, roll, snap, tarot```');
         if (message.guild.id === '450088547857465349') {

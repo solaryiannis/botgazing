@@ -1,4 +1,4 @@
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     if (message.guild.id != '450088547857465349') return;
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Kink left blank";

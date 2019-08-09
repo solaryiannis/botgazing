@@ -1,6 +1,4 @@
-const Discord = require('discord.js');
-
-module.exports.run = (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
   message.delete(30000).catch(console.error);
