@@ -7,10 +7,11 @@ module.exports = {
     u: '%usericon or %usericon <user>',
 	b: false,
 	async execute(client, message, args) {
-        var user;
-        let argsMember = member.user.username.find(args[0]).id;
-        if (argsMember) user = client.fetchUser(argsMember);
-        else user = message.mentions.users.first() || message.author;
-        message.channel.send(user.avatarURL);
+        if (message.mentions.users.size === 0) {
+            message.channel.send(message.author.avatarURL);
+        }
+        else {
+            message.channel.send(message.mentions.users.first().avatarURL);
+        }
 	},
 };

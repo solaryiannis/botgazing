@@ -9,15 +9,14 @@ module.exports = {
 	async execute(client, message, args) {
     var userMember;
 
-    let argsMember = member.user.username.find(args[0]).id;
 
     if (message.mentions.users.size === 0 || !argsMember) {
         userMember = message.author;
         memberUser = message.member;
     }
     else {
-        userMember = message.mentions.users.first() || client.fetchUser(argsMember);
-        memberUser = message.mentions.members.first() || guild.fetchMember(client.fetchUser(argsMember));
+        userMember = message.mentions.users.first();
+        memberUser = message.mentions.members.first();
     }
     
     const embed = new Discord.RichEmbed()
