@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	n: 'userinfo',
 	a: ['userinfo', 'uinfo'],
-    d: 'Gets the current user\'s (or your) info.',
+    d: 'Gets the mentioned user\'s (or your) info.',
     u: '%userinfo or %userinfo <user>',
 	execute(message, args) {
     var userMember;
