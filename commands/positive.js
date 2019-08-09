@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 module.exports = {
 	n: 'positive',
 	a: ['positive', 'positivity', 'happy', 'smile'],
-    d: 'When you're feeling sad...',
+    d: 'When you\'re feeling sad...',
     u: '%positive',
 	execute(message, args) {
     var i = [];
