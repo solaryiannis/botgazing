@@ -26,7 +26,7 @@ module.exports = {
   	.addField('Command Name (Aliases)', `${command.n} (${command.a.join(', ')})`)
   	.addBlankField()
   	.addField('Description', command.d, true)
-  	.addField('Usage', command.d, true)
+  	.addField('Usage', command.u, true)
   	.setTimestamp()
   	.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
     message.channel.send({embed});
