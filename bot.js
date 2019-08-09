@@ -27,9 +27,10 @@ let cmd = messageArray[0].toLowerCase();
 let args = messageArray.slice(1);
 
 if (!client.commands.has(cmd)) return;
-
-client.commands.get(command).execute(message, args).catch (e => {
-	console.error(e);
-});
+try {
+client.commands.get(command).execute(message, args);
+} catch (e) {
+console.log(e);
+}
 
 bot.login(process.env.CLIENT_TOKEN);
