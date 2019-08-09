@@ -23,9 +23,7 @@ client.on('message', message => {
   const commandName = args.shift().toLowerCase();
 
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.a && cmd.a.includes(commandName));
-  console.log(`command: ${command.n} (${command.a})`);
   if (!command) return;
-  console.log(`success in loading ${command.n} (${command.a})`);
 
 		command.execute(message, args).catch (e => {
     console.error(e);
