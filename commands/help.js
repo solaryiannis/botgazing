@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports = {
 	n: 'help',
 	a: ['help', 'h', 'command', 'commands', 'c'],
-    d: 'It\'s time to help!",
+    d: 'It\'s time to help!',
     u: '%help or %help <command>',
 	execute(message, args) {
         const { commands } = message.bot;
