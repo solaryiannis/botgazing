@@ -39,7 +39,7 @@ module.exports = {
             },
             {
                 name: "Permissions",
-                value: new Discord.Permissions(findRole.permissions).toArray().map(", ")
+                value: new Discord.Permissions(findRole.permissions).toArray()
             },
             ],
             timestamp: new Date(),
