@@ -43,7 +43,7 @@ module.exports = {
             },
             {
                 name: "Members",
-                value: findRole.members().toArray().join(", ")
+                value: findRole.members.array().join(", ")
             },
             ],
             timestamp: new Date(),
