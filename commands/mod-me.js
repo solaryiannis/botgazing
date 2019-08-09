@@ -5,12 +5,12 @@ module.exports.run = async (bot, message, args) => {
     
     await message.channel.send(`Okay, ${message.author}, you'd like to be a mod? Very well...`);
     setTimeout(function(){ 
-    await message.channel.send("```let roleAdd = Mod```");
+    message.channel.send("```let roleAdd = Mod```");
     }, 5000);
     setTimeout(function(){ 
-    await message.channel.send("```message.author.addRole(roleAdd)```");
+    message.channel.send("```message.author.addRole(roleAdd)```");
     }, 5000);
-    await setTimeout(function(){ 
+    setTimeout(function(){ 
     message.channel.send("Actually, why would I do that...? I'm not modding you.");
     }, 10000);
     }
