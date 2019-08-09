@@ -32,5 +32,6 @@ client.commands.get(command).execute(message, args);
 } catch (e) {
 console.log(e);
 }
+});
 
 bot.login(process.env.CLIENT_TOKEN);
