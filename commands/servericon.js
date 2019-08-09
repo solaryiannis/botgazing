@@ -5,7 +5,7 @@ module.exports = {
 	a: ['servericon', 'si', 'sicon', 'serveravatar', 'sa', 'savatar'],
     d: 'Find out what the server icon looks like in full.',
     u: '%servericon',
-	execute(message, args) {
+	async execute(message, args) {
     message.channel.send(message.guild.iconURL);
 	},
 };

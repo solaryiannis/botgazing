@@ -5,7 +5,7 @@ module.exports = {
       a: ['serverinfo', 'sinfo', '', ''],
         d: 'Get the current server\'s info.',
         u: '%serverinfo or %serverinfo <user>',
-      execute(message, args) {
+        async execute(message, args) {
         message.channel.send({embed: {
           color: 0x000000,
           author: {

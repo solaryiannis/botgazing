@@ -5,7 +5,7 @@ module.exports = {
 	a: ['kick', 'k', 'boot', 'b'],
     d: 'For those who have you at your wits end.',
     u: '%kick <user> <reason>',
-	execute(message, args) {
+    async execute(message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
     message.delete(3000).catch(console.error);

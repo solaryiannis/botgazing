@@ -5,7 +5,7 @@ module.exports = {
     a: ['say', 'speak', 's'],
       d: 'Have technology speak its mind!',
       u: '%say <text>',
-    execute(message, args) {
+      async execute(message, args) {
       if (message.guild.id != '450088547857465349' && message.author.id != '462492224349929483') return;
 
       message.delete();

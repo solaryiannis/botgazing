@@ -1,6 +1,11 @@
 const Discord = require('discord.js');
 
-module.exports.run = async (bot, message, args) => {
+module.exports = {
+	n: 'kinkshame',
+	a: ['kinkshame', 'kshame', 'ks', 'shame'],
+    d: 'Not all kinks are equal.',
+    u: '%kinkshame <user> <reason>',
+	async execute(message, args) {
     if (message.guild.id != '450088547857465349') return;
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Kink left blank";
@@ -10,4 +15,5 @@ module.exports.run = async (bot, message, args) => {
   
       message.delete(1).catch(console.error);
       kinkMember.send(`${kinkMember}, you have been kinkshamed in ${message.guild}: ${reason}`).catch(console.error);
-    };
+	},
+};

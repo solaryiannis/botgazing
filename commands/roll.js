@@ -5,7 +5,7 @@ module.exports = {
 	a: ['roll', 'd'],
     d: 'Roll the dice!',
     u: '%roll <number>',
-	execute(message, args) {
+	async execute(message, args) {
     var int = parseInt(args);
     var i = Math.round((Math.random() * int) + 1);
     

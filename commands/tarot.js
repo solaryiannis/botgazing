@@ -5,7 +5,7 @@ module.exports = {
       a: ['tarot', 't'],
         d: 'What does the universe want you to know today...?',
         u: '%tarot',
-      execute(message, args) {
+        async execute(message, args) {
         var i = [];
         var k = [];
         var l = [];
