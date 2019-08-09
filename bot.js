@@ -1,39 +1,35 @@
-const Discord = require('discord.js');
-const bot = new Discord.Client();
 const fs = require('fs');
+const Discord = require('discord.js');
 
-bot.once ("ready", () => {
-  console.log(`spiderman 2 pizza theme`);
-  bot.user.setActivity(`${process.env.PREFIX}help`);
-  });
-
+const client = new Discord.Client();
+client.commands = new Discord.Collection();
 const prefix = process.env.PREFIX;
 
-bot.commands = new Discord.Collection();
-
-const commandFiles = fs.readdirSync('./commands').filter(f => f.endsWith('.js'));
+const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
-  bot.commands.set(command.n, command);
+	client.commands.set(command.n, command);
 }
 
-bot.on ("message", async message => {
-if (message.author.bot || !message.content.startsWith(prefix)) return;
-
-const args = message.content.slice(prefix.length).split(/ +/);
-const cmdName = args.shift().toLowerCase();
-
-const cmd = bot.commands.get(cmdName) || bot.commands.find(cmd => cmd.a && cmd.a.includes(cmdName));
-console.log(`${cmd.n} (${cmd.a}) loaded!`);
-if (!cmd) return;
-console.log(`${cmd.n} (${cmd.a}) trying to execute.`);
-
-try {
-bot.commands.get(cmd).execute(message, args);
-} catch (e) {
-console.log(e);
-}
+client.once('ready', () => {
+	console.log('Ready!');
 });
 
-bot.login(process.env.CLIENT_TOKEN);
+client.on('message', message => {
+	if (!message.content.startsWith(prefix) || message.author.bot) return;
+
+	const args = message.content.slice(prefix.length).split(/ +/);
+  const command = client.commands.get(commandName) | client.commands.find(cmd => cmd.a && cmd.a.includes(commandName));
+  console.log(`command: ${command.n} (${command.a})`);
+  if (!command) return;
+  console.log(`success in loading ${command.n} (${command.a})`);
+
+	try {
+		client.commands.get(command).execute(message, args);
+	} catch (error) {
+		console.error(error);
+		message.reply('there was an error trying to execute that command!');
+	}
+});
+client.login(process.env.CLIENT_TOKEN);
