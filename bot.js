@@ -33,12 +33,12 @@ bot.on ("message", message => {
 if (message.author.bot) return;
 if(!message.content.startsWith(prefix)) return;
 
-const args = message.content.split(" ").slice(1);
+const args = message.content.split(" ").slice(1).console.log();
 let cmd = message.content.split(" ")[0];
-let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)));
+let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length))).console.log();
 
 if(commandfile) {
-commandfile.run(bot, message, args);
+commandfile.run(bot, message, args).console.log();
 };
 
 });
