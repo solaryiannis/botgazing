@@ -10,7 +10,6 @@ bot.once ("ready", () => {
 const prefix = process.env.PREFIX;
 
 bot.commands = new Discord.Collection();
-bot.aliases = new Discord.Collection();
 
 const commandFiles = fs.readdirSync('./commands').filter(f => f.endsWith('.js'));
 
@@ -26,11 +25,12 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const cmdName = args.shift().toLowerCase();
 
 const cmd = bot.commands.get(cmdName) || bot.commands.find(cmd => cmd.a && cmd.a.includes(cmdName));
+console.log(`${cmd} loaded!`);
 if (!cmd) return;
+console.log(`${cmd} trying to execute.`);
 
 try {
 bot.commands.get(cmd).execute(message, args);
-console.log(`${cmd} trying to execute.`);
 } catch (e) {
 console.log(e);
 }
