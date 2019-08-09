@@ -19,8 +19,10 @@ client.once('ready', () => {
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 
-	const args = message.content.slice(prefix.length).split(/ +/);
-  const command = client.commands.get(command) | client.commands.find(cmd => cmd.a && cmd.a.includes(command));
+  const args = message.content.slice(prefix.length).split(/ +/);
+  const commandName = args.shift().toLowerCase();
+  
+  const command = client.commands.get(commandName) | client.commands.find(cmd => cmd.a && cmd.a.includes(commandName));
   console.log(`command: ${command.n} (${command.a})`);
   if (!command) return;
   console.log(`success in loading ${command.n} (${command.a})`);
