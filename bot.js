@@ -27,11 +27,9 @@ client.on('message', message => {
   if (!command) return;
   console.log(`success in loading ${command.n} (${command.a})`);
 
-	try {
-		client.commands.get(command).execute(message, args);
-	} catch (error) {
-    console.error(error);
-    message.channel.send(error);
-	}
+		client.commands.get(command).execute(message, args).catch (e => {
+    console.error(e);
+	});
 });
+
 client.login(process.env.CLIENT_TOKEN);
