@@ -29,7 +29,7 @@ module.exports.run = (bot, message, args) => {
       n: "nsfw",
       a: ["lewd"],
       d: "For when you just can't wait any longer for NSFW content.",
-      u: "Get DMed spicy content."
+      u: "Get DMed spicy content.",
       ab: "All Users (Bunker)",
       s: "%nsfw"
   }

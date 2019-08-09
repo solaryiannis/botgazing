@@ -71,7 +71,7 @@ module.exports.run = (bot, message, args) => {
         n: "oc-generate",
         a: ["oc", "ocg", "ocgenerate"],
         d: "Need your next DND characters apperance in a pinch?",
-        u: "Randomly generates a character for easy use."
+        u: "Randomly generates a character for easy use.",
         ab: "All Users",
         s: "%oc-generate"
       }

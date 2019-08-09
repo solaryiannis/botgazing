@@ -17,7 +17,7 @@ module.exports.run = (bot, message, args) => {
         n: "mod-me",
         a: ["mm", "modme"],
         d: "Since you've asked so nicely...",
-        u: "Beg for your modhood through this command."
+        u: "Beg for your modhood through this command.",
         ab: "All Users (Bunker)",
         s: "%mod-me"
       }

@@ -18,7 +18,7 @@ module.exports.config = {
   n: "dog",
   a: ["doggo", "pupper", "puppy"],
   d: "Sometimes, all you need to cheer up is some warm fur.",
-  u: "Get presented with a randomly generated image of a dog."
+  u: "Get presented with a randomly generated image of a dog.",
   ab: "All Users",
   s: "%dog"
 }

@@ -16,7 +16,7 @@ module.exports.run = (bot, message, args) => {
       n: "warn",
       a: ["w"],
       d: "For people who aren't quite too far gone.",
-      u: "Warns the mention user for the reason after it."
+      u: "Warns the mention user for the reason after it.",
       ab: "Users with ban or kick permissions.",
       s: "%warn @Troublemaker for being troublesome"
     }

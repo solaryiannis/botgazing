@@ -29,7 +29,7 @@ module.exports.config = {
     na: "N/A",
     a: [],
     d: "Despacito.",
-    u: "Find out what happens when this is so sad."
+    u: "Find out what happens when this is so sad.",
     ab: "All Users (Bunker)",
     s: "%sad"
   }

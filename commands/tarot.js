@@ -116,7 +116,7 @@ module.exports.run = (bot, message, args) => {
       na: "N/A",
       a: ["t"],
       d: "What does the universe want you to know today...?",
-      u: "Follow the prompt, and find your fortune."
+      u: "Follow the prompt, and find your fortune.",
       ab: "All Users",
       s: "%tarot"
     }

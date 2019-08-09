@@ -9,7 +9,7 @@ message.channel.send(`D${int} Roll: ${i}`);
         n: "roll",
         a: ["d"],
         d: "Roll the dice!",
-        u: "Follow this command by the number of sides on your dice."
+        u: "Follow this command by the number of sides on your dice.",
         ab: "All Users",
         s: "%roll 20"
       }

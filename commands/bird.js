@@ -18,7 +18,7 @@ module.exports.config = {
   n: "bird",
   a: ["birb", "kotori"],
   d: "Sometimes, all you need to cheer up are feathers.",
-  u: "Get presented with a randomly generated image of a bird."
+  u: "Get presented with a randomly generated image of a bird.",
   ab: "All Users",
   s: "%bird"
 }

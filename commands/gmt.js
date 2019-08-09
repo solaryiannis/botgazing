@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
         na: "N/A",
         a: [],
         d: "Figure out if it's quite time to send your friends to bed or not.",
-        u: "Shows you the current time in the GMT timezone."
+        u: "Shows you the current time in the GMT timezone.",
         ab: "All Users",
         s: "%gmt"
       }

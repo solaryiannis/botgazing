@@ -10,7 +10,7 @@ module.exports.config = {
     na: "N/A",
     a: [],
     d: "Have technology speak its mind!",
-    u: "Whatever you type will be deleted and repeated."
+    u: "Whatever you type will be deleted and repeated.",
     ab: "All Users (Bunker)",
     s: "%say Riko Sakurauchi is best girl."
   }

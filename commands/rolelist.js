@@ -20,7 +20,7 @@ module.exports.run = (bot, message, args) => {
       n: "rolelist",
       a: ["rl", "roles"],
       d: "If you need to know what role is what.",
-      u: "Get a list of every role name."
+      u: "Get a list of every role name.",
       ab: "All Users",
       s: "%rolelist"
     }

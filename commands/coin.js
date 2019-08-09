@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
         na: "N/A",
         a: [],
         d: "Deciding between two options? Flip!",
-        u: "Randomly decides between heads or tails."
+        u: "Randomly decides between heads or tails.",
         ab: "All Users",
         s: "%coin"
       }

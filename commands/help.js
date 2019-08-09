@@ -50,7 +50,7 @@ module.exports.config = {
     n: "help",
     a: ["h", "halp"],
     d: "You shouldn't be viewing this.",
-    u: "Something's gone wrong if you have."
+    u: "Something's gone wrong if you have.",
     ab: "All Users",
     s: "%help"
   }

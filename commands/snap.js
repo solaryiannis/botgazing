@@ -15,7 +15,7 @@ module.exports.config = {
     na: "N/A",
     a: [],
     d: "HEAR ME AND REJOICE",
-    u: "Find out if you were saved by the Great Titan."
+    u: "Find out if you were saved by the Great Titan.",
     ab: "All Users",
     s: "%snap"
   }

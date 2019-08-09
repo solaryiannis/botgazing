@@ -14,7 +14,7 @@ module.exports.run = (bot, message, args) => {
       n: "kinkshame",,
       a: ["ks", "shame"],
       d: "For when the kinks are just too much.",
-      u: "Mention a user and type why you're shaming them. The user will find out they've been shamed."
+      u: "Mention a user and type why you're shaming them. The user will find out they've been shamed.",
       ab: "All Users (Bunker)",
       s: "%kinkshame @Troublemaker for eating the last slice"
     }

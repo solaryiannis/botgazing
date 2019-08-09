@@ -45,7 +45,7 @@ module.exports.run = (bot, message, args) => {
         n: "add",
         a: ["tquote", "tq", "thanosq"],
         d: "Hear from humanity's saviour.",
-        u: "I am inevitable."
+        u: "I am inevitable.",
         ab: "All Users (Bunker)",
         s: "%thanosquote"
       }

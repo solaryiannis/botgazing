@@ -27,7 +27,7 @@ module.exports.run = (bot, message, args) => {
       na: "N/A",
       a: [],
       d: "PRESS F",
-      u: "F TO PAY RESPECTS"
+      u: "F TO PAY RESPECTS",
       ab: "All Users",
       s: "%waifu"
     }

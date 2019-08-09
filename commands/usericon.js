@@ -11,7 +11,7 @@ module.exports.config = {
     n: "usericon",
     a: ["uicon"],
     d: "Find out what the mentioned user's (or your) icon looks like in full.",
-    u: "Get the requested icon's url."
+    u: "Get the requested icon's url.",
     ab: "All Users",
     s: "%usericon"
   }

@@ -24,7 +24,7 @@ module.exports.run = (bot, message, args) => {
         na: "N/A",
         a: [],
         d: "When you're feeling sad...",
-        u: "Sends a pick-me-up."
+        u: "Sends a pick-me-up.",
         ab: "All Users",
         s: "%positive"
       }
