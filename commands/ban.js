@@ -5,6 +5,7 @@ module.exports = {
 	a: ['ban', 'b', 'hammer', 'banhammer'],
     d: 'For those who have you at your wits end.',
     u: '%ban <user> <reason>',
+    b: false,
 	async execute(client, message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";

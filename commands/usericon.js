@@ -5,6 +5,7 @@ module.exports = {
 	a: ['usericon', 'uicon', 'useravatar', 'uavatar', 'ua'],
     d: 'Find out what the mentioned user\'s (or your) icon looks like in full.',
     u: '%usericon or %usericon <user>',
+	b: false,
 	async execute(client, message, args) {
         if (message.mentions.users.size === 0) {
             message.channel.send(message.author.avatarURL);

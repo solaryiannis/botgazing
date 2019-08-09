@@ -5,6 +5,7 @@ module.exports = {
       a: ['oc-generate', 'oc', 'ocg', 'ocgenerate'],
         d: 'Need your next DND characters apperance in a pinch?',
         u: '%oc-generate',
+        b: false,
         async execute(client, message, args) {
         var colour = [];
         colour [0] = `white`;

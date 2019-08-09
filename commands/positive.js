@@ -4,6 +4,7 @@ module.exports = {
 	a: ['positive', 'positivity', 'happy', 'smile'],
     d: 'When you\'re feeling sad...',
     u: '%positive',
+    b: false,
     async execute(client, message, args) {
     var i = [];
     

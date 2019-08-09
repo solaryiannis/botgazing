@@ -5,6 +5,7 @@ module.exports = {
       a: ['coin', 'coinflip', 'flipcoin', 'flip'],
         d: 'Deciding between two options? Flip!',
         u: '%coin',
+        b: false,
         async execute(client, message, args) {
         var i = [];
     

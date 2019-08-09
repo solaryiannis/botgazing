@@ -5,6 +5,7 @@ module.exports = {
 	a: ['roleinfo', 'ri', 'role'],
     d: 'If you need to know what role does what.',
     u: '%roleinfo <role name>',
+	b: false,
     async execute(client, message, args) {
 
         if (!args) return message.channel.send("Please type the name of a role.");

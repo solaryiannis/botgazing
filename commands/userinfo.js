@@ -5,6 +5,7 @@ module.exports = {
 	a: ['userinfo', 'uinfo'],
     d: 'Gets the mentioned user\'s (or your) info.',
     u: '%userinfo or %userinfo <user>',
+	b: false,
 	async execute(client, message, args) {
     var userMember;
 

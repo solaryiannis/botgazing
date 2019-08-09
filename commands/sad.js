@@ -5,6 +5,7 @@ module.exports = {
 	a: ['sad', 'thisissosad', 'tiss', 'tissbpd', 'thisissosadbotgazingplaydespacito'],
     d: 'Find out what happens when this is so sad.',
     u: '%sad',
+	b: true,
 	async execute(client, message, args) {
     if (message.guild.id != '450088547857465349') return;
     var i = [];

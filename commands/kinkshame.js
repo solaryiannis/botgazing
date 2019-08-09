@@ -5,6 +5,7 @@ module.exports = {
 	a: ['kinkshame', 'kshame', 'ks', 'shame'],
     d: 'Not all kinks are equal.',
     u: '%kinkshame <user> <reason>',
+	b: true,
 	async execute(client, message, args) {
     if (message.guild.id != '450088547857465349') return;
     let reason = args.slice(1).join(' ');
