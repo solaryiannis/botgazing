@@ -23,3 +23,13 @@ var j = Math.round(Math.random() * 15);
 
 message.channel.send(`${i[j]}`);
 };
+
+module.exports.config = {
+    n: "sad",
+    na: "N/A",
+    a: [],
+    d: "Despacito.",
+    u: "Find out what happens when this is so sad."
+    ab: "All Users (Bunker)",
+    s: "%sad"
+  }

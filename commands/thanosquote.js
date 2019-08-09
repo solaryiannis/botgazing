@@ -40,3 +40,12 @@ module.exports.run = (bot, message, args) => {
     
     message.channel.send(`${i[j]}`);
     };
+
+    module.exports.config = {
+        n: "add",
+        a: ["tquote", "tq", "thanosq"],
+        d: "Hear from humanity's saviour.",
+        u: "I am inevitable."
+        ab: "All Users (Bunker)",
+        s: "%thanosquote"
+      }

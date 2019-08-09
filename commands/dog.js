@@ -13,3 +13,12 @@ module.exports.run = async (bot, message, args) => {
  
   message.channel.send({embed});
 };
+
+module.exports.config = {
+  n: "dog",
+  a: ["doggo", "pupper", "puppy"],
+  d: "Sometimes, all you need to cheer up is some warm fur.",
+  u: "Get presented with a randomly generated image of a dog."
+  ab: "All Users",
+  s: "%dog"
+}

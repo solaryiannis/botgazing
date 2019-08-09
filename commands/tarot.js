@@ -110,3 +110,13 @@ module.exports.run = (bot, message, args) => {
           console.error(e);
         });
     };
+
+    module.exports.config = {
+      n: "tarot",
+      na: "N/A",
+      a: ["t"],
+      d: "What does the universe want you to know today...?",
+      u: "Follow the prompt, and find your fortune."
+      ab: "All Users",
+      s: "%tarot"
+    }

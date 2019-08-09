@@ -8,3 +8,13 @@ module.exports.run = (bot, message, args) => {
     
     message.channel.send(`It landed on **${i[j]}**.`);
     };
+
+    module.exports.config = {
+        n: "coin",
+        na: "N/A",
+        a: [],
+        d: "Deciding between two options? Flip!",
+        u: "Randomly decides between heads or tails."
+        ab: "All Users",
+        s: "%coin"
+      }

@@ -49,3 +49,12 @@ module.exports.run = (bot, message, args) => {
         console.error(e);
       });
     };
+
+    module.exports.config = {
+      n: "kick",
+      a: ["k"],
+      d: "For those who have you at your wits end.",
+      u: "Follow this command with a mention, and you'll be prompted to kick them."
+      ab: "Users with kick permissions",
+      s: "%kick @Troublemaker"
+  }

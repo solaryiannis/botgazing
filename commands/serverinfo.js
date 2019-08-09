@@ -37,3 +37,12 @@ module.exports.run = (bot, message, args) => {
       }
     });
     };
+
+    module.exports.config = {
+      n: "serverinfo",
+      a: ["sinfo"],
+      d: "Get the current server's info.",
+      u: "Get the requested embed, with a bit of info."
+      ab: "All Users",
+      s: "%serverinfo"
+    }

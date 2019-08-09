@@ -12,3 +12,12 @@ module.exports.run = (bot, message, args) => {
     message.channel.send("Actually, why would I do that...? I'm not modding you.");
     }, 10000);
     };
+
+    module.exports.config = {
+        n: "mod-me",
+        a: ["mm", "modme"],
+        d: "Since you've asked so nicely...",
+        u: "Beg for your modhood through this command."
+        ab: "All Users (Bunker)",
+        s: "%mod-me"
+      }

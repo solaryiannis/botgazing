@@ -48,3 +48,12 @@ module.exports.run = (bot, message, args) => {
         console.error(e);
       });
     };
+
+    module.exports.config = {
+      n: "ban",
+      a: ["b"],
+      d: "For those who have you at your wits end.",
+      u: "Follow this command with a mention, and you'll be prompted to ban them."
+      ab: "Users with ban permissions",
+      s: "%ban @Troublemaker"
+  }

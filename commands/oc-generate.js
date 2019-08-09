@@ -66,3 +66,12 @@ module.exports.run = (bot, message, args) => {
 
     message.channel.send(`Hi guys, here's my new OC! They have **${colour [a]}** hair, **${colour [b]}** eyes, and **${colour [c]}** skin, they are **${height [d]}** and **${weight [e]}**. As well, they have **${ability [f]} powers**, and **${feature [g]}**!`);
     };
+
+    module.exports.config = {
+        n: "oc-generate",
+        a: ["oc", "ocg", "ocgenerate"],
+        d: "Need your next DND characters apperance in a pinch?",
+        u: "Randomly generates a character for easy use."
+        ab: "All Users",
+        s: "%oc-generate"
+      }

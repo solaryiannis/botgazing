@@ -9,3 +9,13 @@ module.exports.run = (bot, message, args) => {
         message.channel.send(`**You were spared.** You have had the privilege of being saved by the Great Titan. You did not take it.`);
     }
 };
+
+module.exports.config = {
+    n: "snap",
+    na: "N/A",
+    a: [],
+    d: "HEAR ME AND REJOICE",
+    u: "Find out if you were saved by the Great Titan."
+    ab: "All Users",
+    s: "%snap"
+  }

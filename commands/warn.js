@@ -11,3 +11,12 @@ module.exports.run = (bot, message, args) => {
       warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
       message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
     };
+
+    module.exports.config = {
+      n: "warn",
+      a: ["w"],
+      d: "For people who aren't quite too far gone.",
+      u: "Warns the mention user for the reason after it."
+      ab: "Users with ban or kick permissions.",
+      s: "%warn @Troublemaker for being troublesome"
+    }

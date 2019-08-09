@@ -6,14 +6,17 @@ const Enmap = require('enmap');
 const prefix = "%";
 
 bot.commands = new Discord.Collection();
+bot.aliases = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
-  if (err) return console.error(err);
+  if (err) console.error(err);
     files.forEach(file => {
       if (!file.endsWith(".js")) return;
       let props = require(`./commands/${file}`);
-      let command = file.split(".")[0];
-      bot.commands.set(command, props);
+      bot.commands.set(props.config.name, props);
+      props.config.aliases.forEach(alias => {
+        bot.aliases.set(alias, props.config.name);
+      });
     });
   });
 

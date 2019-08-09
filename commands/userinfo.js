@@ -48,3 +48,12 @@ module.exports.run = (bot, message, args) => {
       }
     });
     };
+
+    module.exports.config = {
+        n: "userinfo",
+        a: ["uinfo"],
+        d: "Get the mentioned user's (or your) info.",
+        u: "Get the requested embed, with a bit of info."
+        ab: "All Users",
+        s: "%userinfo"
+      }

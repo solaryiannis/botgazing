@@ -21,3 +21,13 @@ module.exports.run = (bot, message, args) => {
       }
     });
     };
+
+    module.exports.config = {
+      n: "waifu",
+      na: "N/A",
+      a: [],
+      d: "PRESS F",
+      u: "F TO PAY RESPECTS"
+      ab: "All Users",
+      s: "%waifu"
+    }

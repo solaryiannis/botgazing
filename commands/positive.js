@@ -4,7 +4,7 @@ module.exports.run = (bot, message, args) => {
     i[0] = `No matter what happened today, there are still people behind you that support you.`;
     i[1] = `All of your friends love you!`;
     i[2] = `You've gotten through so much, you can get through this, too!`;
-    i[3] = `This is so sad, can we make Mak the killer?`;
+    i[3] = `You make me smile.`;
     i[4] = `You're super cute.`;
     i[5] = `Don't feel ashamed if you're experiencing negative emotions. Don't suppress yourself for the sake of others.`;
     i[6] = `Please don't forget that everyone cares about you.`;
@@ -18,3 +18,13 @@ module.exports.run = (bot, message, args) => {
     
     message.channel.send(`${i[j]}`);
     };
+
+    module.exports.config = {
+        n: "positive",
+        na: "N/A",
+        a: [],
+        d: "When you're feeling sad...",
+        u: "Sends a pick-me-up."
+        ab: "All Users",
+        s: "%positive"
+      }
