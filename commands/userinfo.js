@@ -7,8 +7,10 @@ module.exports = {
     u: '%userinfo or %userinfo <user>',
 	b: false,
 	async execute(client, message, args) {
-    var userMember;
-    const member = message.mentions.members.first();
+    var member;
+    var user;
+    
+    member = message.mentions.members.first();
     if (!member) {
       member = message.guild.members.get(args[0]);
       if (!member)
