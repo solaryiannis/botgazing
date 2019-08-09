@@ -5,7 +5,7 @@ module.exports = {
 	a: ['divide'],
     d: 'Forget your calculator at home? Have no fear!',
     u: '%divide <number> <number>',
-	async execute(message, args) {
+	async execute(client, message, args) {
     let numArray = args.map(n=> parseInt(n));
     let total = numArray.reduce((p,c) => p/c);
     message.channel.send(`The quotient is ${total}.`);

@@ -5,7 +5,7 @@ module.exports = {
 	a: ['warn', 'w'],
     d: 'For people who aren\'t quite too far gone.',
     u: '%warn <user> <reason>',
-	async execute(message, args) {
+	async execute(client, message, args) {
     let reason = args.slice(1).join(' ');
     if(!reason) reason = "Reason left blank";
   

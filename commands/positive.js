@@ -4,7 +4,7 @@ module.exports = {
 	a: ['positive', 'positivity', 'happy', 'smile'],
     d: 'When you\'re feeling sad...',
     u: '%positive',
-    async execute(message, args) {
+    async execute(client, message, args) {
     var i = [];
     
     i[0] = `No matter what happened today, there are still people behind you that support you.`;

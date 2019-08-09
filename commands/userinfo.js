@@ -5,7 +5,7 @@ module.exports = {
 	a: ['userinfo', 'uinfo'],
     d: 'Gets the mentioned user\'s (or your) info.',
     u: '%userinfo or %userinfo <user>',
-	async execute(message, args) {
+	async execute(client, message, args) {
     var userMember;
 
     if (message.mentions.users.size === 0) {

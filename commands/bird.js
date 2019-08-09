@@ -5,7 +5,7 @@ module.exports = {
 	a: ['bird', 'birb', 'kotori'],
   d: 'Sometimes, all you need to cheer up are feathers.',
   u: '%bird',
-	async execute (message, args) {
+	async execute (client, message, args) {
     const superagent = require ("superagent");
 
     let {body} = await superagent

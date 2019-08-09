@@ -5,7 +5,7 @@ module.exports = {
       a: ['thanosquote', 'tquote', 'tq', 'thanosq'],
         d: 'Hear from humanity\'s saviour.',
         u: '%thanosquote',
-        async execute(message, args) {
+        async execute(client, message, args) {
         if (message.guild.id != '450088547857465349') return;
         var i = [];
         

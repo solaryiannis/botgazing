@@ -5,7 +5,7 @@ module.exports = {
 	a: ['snap', 'tdnw', 'thanosdidnothingwrong'],
     d: 'Find out if you were saved by the Great Titan.',
     u: '%snap',
-	async execute(message, args) {
+	async execute(client, message, args) {
         var num = Math.round((Math.random() * 2) + 1);
         if (num === 1) {
             message.react("✅").catch(console.error);

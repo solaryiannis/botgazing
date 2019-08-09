@@ -25,7 +25,7 @@ client.on('message', message => {
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.a && cmd.a.includes(commandName));
   if (!command) return;
 
-		command.execute(message, args).catch (e => {
+		command.execute(client, message, args).catch (e => {
     console.error(e);
 	});
 });
