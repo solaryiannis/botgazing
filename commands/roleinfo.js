@@ -13,7 +13,7 @@ module.exports = {
         if (!findRole) return message.channel.send("I couldn't find that role...");
 
         message.channel.send({embed: {
-            color: findRole.colour,
+            color: findRole.color,
             author: {
               name: `${findRole.name} (${findRole.id})`,
               icon_url: message.author.avatarURL
