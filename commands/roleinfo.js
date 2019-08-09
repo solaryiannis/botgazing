@@ -13,46 +13,19 @@ module.exports = {
 
         if (!findRole) return message.channel.send("I couldn't find that role...");
 
-        message.channel.send({embed: {
-            color: findRole.color,
-            author: {
-              name: `${findRole.name} (${findRole.id})`,
-              icon_url: message.author.avatarURL
-            },
-            title: "Hex Colour",
-            description: findRole.hexColor,
-            fields: [
-            {
-                name: "Mentionable",
-                value: findRole.mentionable
-            },
-            {
-                name: "Hoisted",
-                value: findRole.hoist
-            },
-            {
-                name: "Role Position",
-                value: findRole.calculatedPosition
-            },
-            {
-                name: "Mentionable",
-                value: findRole.mentionable
-            },
-            {
-                name: "Permissions",
-                value: new Discord.Permissions(findRole.permissions).toArray().join(", ")
-            },
-            {
-                name: "Members",
-                value: findRole.members.array().join(", ")
-            },
-            ],
-            timestamp: new Date(),
-            footer: {
-              icon_url: client.user.avatarURL,
-              text: `I'm ${client.user.tag}!`
-            }
-          }
-        });
+        const embed = new Discord.RichEmbed()
+    .setColor(findRole.color)
+    .setTitle(`%roleinfo`)
+  	.addField('Role', `${findRole.name} (${findRole.id})`)
+  	.addBlankField()
+  	.addField('Mentionable', findRole.mentionable, true)
+    .addField('Hoisted', findRole.hoist, true)
+    .addField('Colour', findRole.hexColor, true)
+    .addField('Position', findRole.calculatedPosition, true)
+    .addField('Permissions', new Discord.Permissions(findRole.permissions).toArray().join(", "))
+    .addField(`Members (${findRole.members.size})`, findRole.members.array().join(", "))
+  	.setTimestamp()
+    .setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
+    message.channel.send({embed});
   },
 };

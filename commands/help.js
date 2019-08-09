@@ -20,30 +20,15 @@ module.exports = {
 	        return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`$help <command>\`!`);
         }
 
-        message.channel.send({embed: {
-            color: 0x000000,
-            author: {
-              name: `${message.author.username} requested help!`,
-              icon_url: message.author.avatarURL
-            },
-            title: "Command Name (Aliases)",
-            description: `${command.n} (${command.a.join(', ')})`,
-            fields: [
-            {
-                name: "Description",
-                value: command.d
-            },
-            {
-                name: "Usage",
-                value: command.u
-            },
-            ],
-            timestamp: new Date(),
-            footer: {
-              icon_url: client.user.avatarURL,
-              text: `I'm ${client.user.tag}!`
-            }
-          }
-        });
+        const embed = new Discord.RichEmbed()
+    .setColor(0x000000)
+    .setTitle(`%help`)
+  	.addField('Command Name (Aliases)', `${command.n} (${command.a.join(', ')})`)
+  	.addBlankField()
+  	.addField('Description', command.d, true)
+  	.addField('Usage', command.d, true)
+  	.setTimestamp()
+  	.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
+    message.channel.send({embed});
 	},
 };
