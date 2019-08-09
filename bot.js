@@ -30,8 +30,8 @@ client.on('message', message => {
 	try {
 		client.commands.get(command).execute(message, args);
 	} catch (error) {
-		console.error(error);
-		message.reply('there was an error trying to execute that command!');
+    console.error(error);
+    message.channel.send(error);
 	}
 });
 client.login(process.env.CLIENT_TOKEN);
