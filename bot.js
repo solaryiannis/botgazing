@@ -3,19 +3,24 @@ const bot = new Discord.Client();
 const fs = require('fs');
 const Enmap = require('enmap');
 
+bot.on ("ready", () => {
+  console.log(`spiderman 2 pizza theme`);
+  bot.user.setActivity('%help');
+  });
+
 const prefix = "%";
 
 bot.commands = new Discord.Collection();
 bot.aliases = new Discord.Collection();
 
-fs.readdir("./commands/", (err, files) => {
-  if (err) console.error(err);
+fs.readdir("./commands/", (e, files) => {
+  if (e) console.error(e);
 
   let jsfile = files.filter(f => f.split(".").pop() === "js")
   if(jsfile.length <= 0) {
     return console.log("????????? No Commands ?????????");
   }
-    jsfile.forEach(f => {
+    jsfile.forEach((f, i) => {
       let props = require(`./commands/${f}`);
       bot.commands.set(props.config.n, props);
       props.config.a.forEach(alias => {
@@ -23,11 +28,6 @@ fs.readdir("./commands/", (err, files) => {
       });
     });
   });
-
-bot.on ("ready", () => {
-console.log(`spiderman 2 pizza theme`);
-bot.user.setActivity('%help');
-});
 
 bot.on ("message", message => {
 try{
