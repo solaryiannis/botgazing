@@ -9,7 +9,7 @@ module.exports = {
 	async execute(client, message, args) {
     var userMember;
     const member = message.mentions.members.first();
-    if !member {
+    if (!member) {
       member = message.guild.members.get(args[0]);
       if (!member)
       {
