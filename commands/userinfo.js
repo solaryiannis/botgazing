@@ -21,7 +21,7 @@ module.exports = {
     const embed = new Discord.RichEmbed()
     .setColor(memberUser.displayColor)
     .setTitle(`%userinfo`)
-  	.setThumbnail(message.author.avatarURL)
+  	.setThumbnail(userMember.avatarURL)
   	.addField('User', `${userMember.tag} (${userMember.id})`)
   	.addBlankField()
   	.addField('Bot User', userMember.bot, true)
