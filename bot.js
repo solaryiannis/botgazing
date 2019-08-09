@@ -26,9 +26,9 @@ let messageArray = message.content.split(" ");
 let cmd = messageArray[0].toLowerCase();
 let args = messageArray.slice(1);
 
-if (!client.commands.has(cmd)) return;
+if (!bot.commands.has(cmd)) return;
 try {
-client.commands.get(command).execute(message, args);
+bot.commands.get(command).execute(message, args);
 } catch (e) {
 console.log(e);
 }
