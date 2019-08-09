@@ -9,8 +9,7 @@ module.exports = {
 	async execute(client, message, args) {
     var userMember;
 
-
-    if (message.mentions.users.size === 0 || !argsMember) {
+    if (message.mentions.users.size === 0) {
         userMember = message.author;
         memberUser = message.member;
     }
