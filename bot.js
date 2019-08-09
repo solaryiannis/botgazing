@@ -30,16 +30,21 @@ bot.user.setActivity('%help');
 });
 
 bot.on ("message", message => {
+try{
 if (message.author.bot) return;
 if(!message.content.startsWith(prefix)) return;
 
-const args = message.content.split(" ").slice(1).console.log();
+const args = message.content.split(" ").slice(1);
 let cmd = message.content.split(" ")[0];
-let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length))).console.log();
+let commandfile = bot.commands.get(cmd.slice(prefix.length)) || bot.commands.get(bot.aliases.get(cmd.slice(prefix.length)));
 
 if(commandfile) {
-commandfile.run(bot, message, args).console.log();
+commandfile.run(bot, message, args);
 };
+}
+catch (e) {
+  console.log(e);
+}
 
 });
 
