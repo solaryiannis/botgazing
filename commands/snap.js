@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports.run = async (bot, message, args) => {
     var num = Math.round((Math.random() * 2) + 1);
     if (num === 1) {

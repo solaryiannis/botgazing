@@ -1,7 +1,6 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const fs = require('fs');
-const Enmap = require('enmap');
 
 bot.on ("ready", () => {
   console.log(`spiderman 2 pizza theme`);

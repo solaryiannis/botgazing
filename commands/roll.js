@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports.run = async (bot, message, args) => {
 var int = parseInt(args);
 var i = Math.round((Math.random() * int) + 1);

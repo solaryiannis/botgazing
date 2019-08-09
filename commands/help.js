@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports.run = async (bot, message, args) => {
     if (args == 'help' || !args) {
         message.channel.send('**Info Commands**```gmt, help, m-help, rolelist, servericon, serverinfo, usericon, userinfo```**Math Commands**```add, subtract, multiply, divide```**Other Commands**```bird, cat, coin, dog, roll, snap, tarot```');

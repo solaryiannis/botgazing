@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports.run = async (bot, message, args) => {
 if (message.mentions.users.size === 0) {
     message.channel.send(message.author.avatarURL);
