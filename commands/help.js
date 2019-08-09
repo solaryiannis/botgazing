@@ -38,8 +38,8 @@ module.exports = {
             ],
             timestamp: new Date(),
             footer: {
-              icon_url: bot.user.avatarURL,
-              text: `I'm ${bot.user.tag}!`
+              icon_url: client.user.avatarURL,
+              text: `I'm ${client.user.tag}!`
             }
           }
         });
