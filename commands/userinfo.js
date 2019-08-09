@@ -9,7 +9,7 @@ module.exports = {
 	async execute(client, message, args) {
     var userMember;
 
-    let argsMember = message.server.members.get("name", args[0]).id;
+    let argsMember = message.guild.members.get("name", args[0]).id;
 
     if (message.mentions.users.size === 0 || !argsMember) {
         userMember = message.author;
