@@ -25,9 +25,9 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const cmdName = args.shift().toLowerCase();
 
 const cmd = bot.commands.get(cmdName) || bot.commands.find(cmd => cmd.a && cmd.a.includes(cmdName));
-console.log(`${cmd} loaded!`);
+console.log(`${cmd.n} (${cmd.a}) loaded!`);
 if (!cmd) return;
-console.log(`${cmd} trying to execute.`);
+console.log(`${cmd} (${cmd.a}) trying to execute.`);
 
 try {
 bot.commands.get(cmd).execute(message, args);
