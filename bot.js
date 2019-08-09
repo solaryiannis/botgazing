@@ -26,7 +26,7 @@ const args = message.content.slice(prefix.length).split(/ +/);
 const cmdName = args.shift().toLowerCase();
 
 if (!bot.commands.has(cmdName)) return;
-const cmd = bot.commands.get(commandName) || bot.commands.find(cmd => cmd.a && cmd.a.includes(cmdName));
+const cmd = bot.commands.get(cmdName) || bot.commands.find(cmd => cmd.a && cmd.a.includes(cmdName));
 try {
 bot.commands.get(cmd).execute(message, args);
 console.log(`${cmd} trying to execute.`);
