@@ -8,7 +8,7 @@ module.exports = {
 	b: false,
 	async execute(client, message, args) {
         var user;
-        let argsMember = message.guild.members.get("name", args[0]).id;
+        let argsMember = member.user.username.find(args[0]).id;
         if (argsMember) user = client.fetchUser(argsMember);
         else user = message.mentions.users.first() || message.author;
         message.channel.send(user.avatarURL);
