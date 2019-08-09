@@ -14,7 +14,7 @@ for (const file of commandFiles) {
 
 client.once('ready', () => {
 	console.log(`PIGIIII`);
-  bot.user.setActivity(`${process.env.PREFIX}help`);
+  client.user.setActivity(`${process.env.PREFIX}help`);
 });
 
 client.on('message', message => {
