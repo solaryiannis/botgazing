@@ -1,3 +1,5 @@
+const Discord = require('discord.js');
+
 module.exports.run = (bot, message, args) => {
 let numArray = args.map(n=> parseInt(n));
 let total = numArray.reduce((p,c) => p+c);
