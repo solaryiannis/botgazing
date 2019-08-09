@@ -6,7 +6,7 @@ module.exports = {
     d: 'It\'s time to help!',
     u: '%help or %help <command>',
     async execute(message, args) {
-        const { commands } = message.bot;
+        const { commands } = message.client;
         if (!args.length) {
             message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\n\nFor help with a specific command, type \`$help <command>\`!`);
         }
