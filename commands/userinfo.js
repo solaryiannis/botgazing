@@ -9,7 +9,7 @@ module.exports = {
 	async execute(client, message, args) {
     var member;
     var user;
-    
+
     member = message.mentions.members.first();
     if (!member) {
       member = message.guild.members.get(args[0]);
@@ -19,7 +19,7 @@ module.exports = {
         member = message.guild.members.find(args[0]);
       }
     }
-    const user = member.user;
+    user = member.user;
     
     const embed = new Discord.RichEmbed()
     .setColor(member.displayColor)
