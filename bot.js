@@ -10,9 +10,13 @@ bot.aliases = new Discord.Collection();
 
 fs.readdir("./commands/", (err, files) => {
   if (err) console.error(err);
-    files.forEach(file => {
-      if (!file.endsWith(".js")) return;
-      let props = require(`./commands/${file}`);
+
+  let jsfile = files.filter(f => f.split(".").pop() === "js")
+  if(jsfile.length <= 0) {
+    return console.log("????????? No Commands ?????????");
+  }
+    jsfile.forEach(f => {
+      let props = require(`./commands/${f}`);
       bot.commands.set(props.config.n, props);
       props.config.a.forEach(alias => {
         bot.aliases.set(alias, props.config.n);
@@ -31,7 +35,7 @@ if(!message.content.startsWith(prefix)) return;
 
 const args = message.content.split(" ").slice(1);
 let cmd = message.content.split(" ")[0];
-let commandfile = bot.commands.get(cmd.slice(prefix.length));
+let commandfile = bot.commands.get(bot.n.get(cmd.slice(prefix.length))) || bot.commands.get(bot.a.get(cmd.slice(prefix.length)));
 
 if(commandfile) {
 commandfile.run(bot, message, args);
