@@ -11,7 +11,7 @@ module.exports.run = (bot, message, args) => {
     setTimeout(function(){ 
     message.channel.send("Actually, why would I do that...? I'm not modding you.");
     }, 10000);
-    };
+    }
 
     module.exports.config = {
         n: "mod-me",

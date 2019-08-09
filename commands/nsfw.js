@@ -23,7 +23,7 @@ module.exports.run = (bot, message, args) => {
       }
     }
   }).catch(console.error);
-    };
+    }
 
     module.exports.config = {
       n: "nsfw",

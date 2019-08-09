@@ -10,7 +10,7 @@ module.exports.run = (bot, message, args) => {
       message.delete(1).catch(console.error);
       warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
       message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
-    };
+    }
 
     module.exports.config = {
       n: "warn",

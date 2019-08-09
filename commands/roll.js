@@ -3,7 +3,7 @@ var int = parseInt(args);
 var i = Math.round((Math.random() * int) + 1);
 
 message.channel.send(`D${int} Roll: ${i}`);
-    };
+    }
 
     module.exports.config = {
         n: "roll",

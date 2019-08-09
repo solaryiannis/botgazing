@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
   
       message.delete(1).catch(console.error);
       kinkMember.send(`${kinkMember}, you have been kinkshamed in ${message.guild}: ${reason}`).catch(console.error);
-    };
+    }
 
     module.exports.config = {
       n: "kinkshame",

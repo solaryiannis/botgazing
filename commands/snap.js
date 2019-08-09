@@ -8,7 +8,7 @@ module.exports.run = (bot, message, args) => {
         message.react("❌").catch(console.error);
         message.channel.send(`**You were spared.** You have had the privilege of being saved by the Great Titan. You did not take it.`);
     }
-};
+}
 
 module.exports.config = {
     n: "snap",

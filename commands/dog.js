@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
     .setImage(body.message)
  
   message.channel.send({embed});
-};
+}
 
 module.exports.config = {
   n: "dog",

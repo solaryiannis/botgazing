@@ -7,7 +7,7 @@ module.exports.run = (bot, message, args) => {
     var j = Math.round(Math.random() * 1);
     
     message.channel.send(`It landed on **${i[j]}**.`);
-    };
+    }
 
     module.exports.config = {
         n: "coin",

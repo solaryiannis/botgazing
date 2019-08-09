@@ -39,7 +39,7 @@ module.exports.run = (bot, message, args) => {
     var j = Math.round(Math.random() * 31);
     
     message.channel.send(`${i[j]}`);
-    };
+    }
 
     module.exports.config = {
         n: "add",

@@ -109,7 +109,7 @@ module.exports.run = (bot, message, args) => {
       }).catch(e => {
           console.error(e);
         });
-    };
+    }
 
     module.exports.config = {
       n: "tarot",

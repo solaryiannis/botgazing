@@ -22,7 +22,7 @@ i[15] = `This is so sad, host a VC party.`;
 var j = Math.round(Math.random() * 15);
 
 message.channel.send(`${i[j]}`);
-};
+}
 
 module.exports.config = {
     n: "sad",

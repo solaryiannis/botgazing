@@ -1,6 +1,6 @@
 module.exports.run = (bot, message, args) => {
 message.channel.send('```ban, kick, warn```');
-};
+}
 
 module.exports.config = {
   n: "m-help",

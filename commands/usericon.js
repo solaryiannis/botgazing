@@ -5,7 +5,7 @@ if (message.mentions.users.size === 0) {
 else {
     message.channel.send(message.mentions.users.first().avatarURL);
 }
-};
+}
 
 module.exports.config = {
     n: "usericon",

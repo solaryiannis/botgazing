@@ -3,7 +3,7 @@ if (message.guild.id != '450088547857465349' && message.author.id != '4624922243
 
 message.delete();
 message.channel.send(args.join(" "));
-};
+}
 
 module.exports.config = {
     n: "say",

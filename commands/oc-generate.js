@@ -65,7 +65,7 @@ module.exports.run = (bot, message, args) => {
     var e = Math.round(Math.random() * 8);
 
     message.channel.send(`Hi guys, here's my new OC! They have **${colour [a]}** hair, **${colour [b]}** eyes, and **${colour [c]}** skin, they are **${height [d]}** and **${weight [e]}**. As well, they have **${ability [f]} powers**, and **${feature [g]}**!`);
-    };
+    }
 
     module.exports.config = {
         n: "oc-generate",
