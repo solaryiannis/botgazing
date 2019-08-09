@@ -12,6 +12,8 @@ module.exports = {
 
         if (!findRole) return message.channel.send("I couldn't find that role...");
 
+        console.log(new Discord.Permissions(findRole.permissions).toArray());
+
         message.channel.send({embed: {
             color: findRole.color,
             author: {
