@@ -39,11 +39,7 @@ module.exports = {
             },
             {
                 name: "Permissions",
-                value: findRole.permissions
-            },
-            {
-                name: "Created At",
-                value: new Date(findRole.createdTimestamp).toGMTString()
+                value: new Discord.Permissions(findRole.permissions)
             },
             ],
             timestamp: new Date(),
