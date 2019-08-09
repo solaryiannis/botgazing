@@ -13,9 +13,9 @@ fs.readdir("./commands/", (err, files) => {
     files.forEach(file => {
       if (!file.endsWith(".js")) return;
       let props = require(`./commands/${file}`);
-      bot.commands.set(props.config.name, props);
-      props.config.aliases.forEach(alias => {
-        bot.aliases.set(alias, props.config.name);
+      bot.commands.set(props.config.n, props);
+      props.config.a.forEach(alias => {
+        bot.aliases.set(alias, props.config.n);
       });
     });
   });
