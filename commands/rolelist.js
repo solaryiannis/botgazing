@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
-    message.channel.send({embed: {
+  await message.channel.send({embed: {
         color: 0x000000,
         author: {
           name: `Role List for ${message.guild.name} (${message.guild.id})`,

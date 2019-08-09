@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
     if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS") || !message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return;
   
       message.delete(1).catch(console.error);
-      warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
-      message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
+      await warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
+      await message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
     }
 
     module.exports.config = {

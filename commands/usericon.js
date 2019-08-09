@@ -2,10 +2,10 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
 if (message.mentions.users.size === 0) {
-    message.channel.send(message.author.avatarURL);
+    await message.channel.send(message.author.avatarURL);
 }
 else {
-    message.channel.send(message.mentions.users.first().avatarURL);
+    await message.channel.send(message.mentions.users.first().avatarURL);
 }
 }
 

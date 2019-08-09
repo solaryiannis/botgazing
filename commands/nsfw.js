@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 module.exports.run = async (bot, message, args) => {
     if (message.guild.id != '450088547857465349') return;
     message.react("✅").catch(console.error);
-    message.author.send({embed: {
+    await message.author.send({embed: {
       color: 0xBBA1E4,
       author: {
         name: "Oh shit, now you fucked up.",

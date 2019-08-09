@@ -12,7 +12,7 @@ module.exports.run = async (bot, message, args) => {
         memberUser = message.mentions.members.first();
     }
     
-    message.channel.send({embed: {
+    await message.channel.send({embed: {
         color: memberUser.displayColor,
         author: {
           name: `${userMember.tag} (${userMember.id})`,

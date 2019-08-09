@@ -18,7 +18,7 @@ module.exports.run = async (bot, message, args) => {
     
     var j = Math.round(Math.random() * 11);
     
-    message.channel.send(`${i[j]}`);
+    await message.channel.send(`${i[j]}`);
     }
 
     module.exports.config = {

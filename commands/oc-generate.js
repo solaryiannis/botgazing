@@ -66,7 +66,7 @@ module.exports.run = async (bot, message, args) => {
     weight [8] = `curvy`;
     var e = Math.round(Math.random() * 8);
 
-    message.channel.send(`Hi guys, here's my new OC! They have **${colour [a]}** hair, **${colour [b]}** eyes, and **${colour [c]}** skin, they are **${height [d]}** and **${weight [e]}**. As well, they have **${ability [f]} powers**, and **${feature [g]}**!`);
+    await message.channel.send(`Hi guys, here's my new OC! They have **${colour [a]}** hair, **${colour [b]}** eyes, and **${colour [c]}** skin, they are **${height [d]}** and **${weight [e]}**. As well, they have **${ability [f]} powers**, and **${feature [g]}**!`);
     }
 
     module.exports.config = {

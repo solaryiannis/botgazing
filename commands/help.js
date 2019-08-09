@@ -2,16 +2,16 @@ const Discord = require('discord.js');
 
 module.exports.run = async (bot, message, args) => {
     if (args == 'help' || !args) {
-        message.channel.send('**Info Commands**```gmt, help, m-help, rolelist, servericon, serverinfo, usericon, userinfo```**Math Commands**```add, subtract, multiply, divide```**Other Commands**```bird, cat, coin, dog, roll, snap, tarot```');
+        await message.channel.send('**Info Commands**```gmt, help, m-help, rolelist, servericon, serverinfo, usericon, userinfo```**Math Commands**```add, subtract, multiply, divide```**Other Commands**```bird, cat, coin, dog, roll, snap, tarot```');
         if (message.guild.id === '450088547857465349') {
-            message.channel.send("**Bunker Commands** ```kinkshame, mod-me, sad, say, thanosquote```");
+            await message.channel.send("**Bunker Commands** ```kinkshame, mod-me, sad, say, thanosquote```");
         }
     }
     if (args) {
         let cmd = args;
         if (bot.commands.has(cmd)) {
             cmd = bot.commands.get(cmd);
-            message.channel.send({embed: {
+            await message.channel.send({embed: {
                 color: 0x000000,
                 author: {
                   name: `${message.author.username} requested help!`,
