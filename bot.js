@@ -27,7 +27,7 @@ client.on('message', message => {
   if (!command) return;
   console.log(`success in loading ${command.n} (${command.a})`);
 
-		client.commands.get(command).execute(message, args).catch (e => {
+		command.execute(message, args).catch (e => {
     console.error(e);
 	});
 });
