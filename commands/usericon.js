@@ -7,11 +7,26 @@ module.exports = {
     u: '%usericon or %usericon <user>',
 	b: false,
 	async execute(client, message, args) {
-        if (message.mentions.users.size === 0) {
-            message.channel.send(message.author.avatarURL);
+        var member;
+        var user;
+    
+        member = message.mentions.members.first();
+        if (!member) {
+          member = message.guild.members.get(args[0]);
+          if (!member)
+          {
+            member = message.guild.members.find(m => m.user.username === args[0]);
+            if (!member) {
+              member = message.guild.members.find(m => m.displayName === args[0]);
+              if (!member) {
+                  member = message.guild.members.find(m => m.user.tag === args[0]);
+                  if (!member) return message.channel.send ("Couldn't find the user...");
+              }  
+            }
+          }
         }
-        else {
-            message.channel.send(message.mentions.users.first().avatarURL);
-        }
+        user = member.user;
+        
+        message.channel.send(user.avatarURL);
 	},
 };
