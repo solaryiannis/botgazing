@@ -19,6 +19,7 @@ module.exports = {
             if (!member) {
               member = message.guild.members.find(m => m.displayName === args.join(" "));
               if (!member) {
+                if (!args) member = message.member;
                   member = message.guild.members.find(m => m.user.tag === args.join(" "));
                   if (!member) return message.channel.send ("Couldn't find the user...");
               }  
