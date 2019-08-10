@@ -7,7 +7,25 @@ module.exports = {
         u: '%murder',
         b: false,
         async execute(client, message, args) {
-        var user = message.author;
+          var member;
+          var user;
+          member = message.mentions.members.first();
+          if (!member) {
+            member = message.guild.members.get(args[0]);
+            if (!member)
+            {
+              member = message.guild.members.find(m => m.user.username === args.join(" "));
+              if (!member) {
+                member = message.guild.members.find(m => m.displayName === args.join(" "));
+                if (!member) {
+                    member = message.guild.members.find(m => m.user.tag === args.join(" "));
+                    if (!member) member = message.member;
+                }  
+              }
+            }
+          }
+          user = member.user;
+          
         var room = [];
         room [0] = `The Armoury`;
         room [1] = `The Tavern`;
