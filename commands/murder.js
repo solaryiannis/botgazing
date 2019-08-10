@@ -25,7 +25,7 @@ module.exports = {
             }
           }
           user = member.user;
-          
+
         var room = [];
         room [0] = `The Armoury`;
         room [1] = `The Tavern`;
@@ -66,7 +66,7 @@ module.exports = {
         ult [18] = `Sweeper`;
         ult [19] = `Idiot`;
         ult [20] = `Bath Water Connoisseur`;
-        var b = Math.round(Math.random() * 1);
+        var b = Math.round(Math.random() * 20);
 
         var mark = [];
         mark [0] = `wound`;
