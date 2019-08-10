@@ -19,7 +19,7 @@ module.exports = {
     .addField('Region', message.guild.region, true)
     .addField('Channels', message.guild.channels.size, true)
     .addField('Server Created', new Date(message.guild.createdTimestamp).toGMTString())
-    .addField(`Roles`, `${message.guild.roles.size} roles. To see all role names, use "%rolelist"!`)
+    .addField(`Roles (${message.guild.roles.size})`, `To see all role names, use "%rolelist"!`)
   	.setTimestamp()
   	.setFooter(`I'm ${client.user.tag}!`, client.user.avatarURL);
     message.channel.send({embed});
