@@ -106,6 +106,6 @@ module.exports = {
         condition [15] = `covered in glass shards and smelling of onion`;
         var i = Math.round(Math.random() * 15);
     
-        message.channel.send(`**Attention, residents of The ${message.guild.name} Mansion! A BODY HAS BEEN DISCOVERED!!!!**\n${message.author.username} was found dead in ${room[a]}. They were the **Ultimate ${ult[b]}**!\nTheir body is ${condition[i]}, with a ${mark[f]} to their ${body[c]}, ${mark[g]} to their ${body[d]}, and ${mark[h]} to their ${body[e]}.`);
+        message.channel.send(`**Attention, residents of The ${message.guild.name} Mansion! A BODY HAS BEEN DISCOVERED!!!!**\n${message.member.user.username} was found dead in ${room[a]}. They were the **Ultimate ${ult[b]}**!\nTheir body is ${condition[i]}, with a ${mark[f]} to their ${body[c]}, ${mark[g]} to their ${body[d]}, and ${mark[h]} to their ${body[e]}.`);
       },
     };
