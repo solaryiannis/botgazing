@@ -53,9 +53,9 @@ module.exports = {
         var mark = [];
         mark [0] = `wound`;
         mark [1] = `bruise`;
-        var c = Math.round(Math.random() * 1);
-        var d = Math.round(Math.random() * 1);
-        var e = Math.round(Math.random() * 1);
+        var f = Math.round(Math.random() * 1);
+        var g = Math.round(Math.random() * 1);
+        var h = Math.round(Math.random() * 1);
 
         var body = [];
         body [0] = `head`;
@@ -83,9 +83,9 @@ module.exports = {
         body [21] = `right hand`;
         body [22] = `entire right arm`;
         body [23] = `entire right leg`;
-        var f = Math.round(Math.random() * 23);
-        var g = Math.round(Math.random() * 23);
-        var h = Math.round(Math.random() * 23);
+        var c = Math.round(Math.random() * 23);
+        var d = Math.round(Math.random() * 23);
+        var e = Math.round(Math.random() * 23);
 
         var condition = [];
         condition [0] = `burnt on the left side of their body`;
