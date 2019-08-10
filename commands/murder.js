@@ -105,7 +105,8 @@ module.exports = {
         condition [14] = `partially dissolved by acid`;
         condition [15] = `covered in glass shards and smelling of onion`;
         var i = Math.round(Math.random() * 15);
-    
+        
+        console.log(`${message.member.user.username}, ${room[a]}, Ultimate ${ult[b]}, ${condition[i]}, ${mark[f]} ${body[c]}, ${mark[g]} ${body[d]}, ${mark[h]} ${body[e]}`);
         message.channel.send(`**Attention, residents of Discord Mansion! A BODY HAS BEEN DISCOVERED!!!!**\n${message.member.user.username} was found dead in ${room[a]}. They were the **Ultimate ${ult[b]}**!\nTheir body is ${condition[i]}, with a ${mark[f]} to their ${body[c]}, ${mark[g]} to their ${body[d]}, and ${mark[h]} to their ${body[e]}.`);
       },
     };
