@@ -10,8 +10,8 @@ module.exports = {
         const { commands } = message.client;
         const command = commands.get(args[0]) || commands.find(c => c.aliases && c.aliases.includes(args[0]));
         if (!args.length || !command) {
-          if (message.guild.id == '450088547857465349') return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`$help <command>\`!`);
-            else return message.channel.send(`**Commands List:**\n\`\`\`${commands.filter(command => command.b !== true).map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`$help <command>\`!`);
+          if (message.guild.id == '450088547857465349') return message.channel.send(`**Commands List:**\n\`\`\`${commands.map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`%help <command>\`!`);
+            else return message.channel.send(`**Commands List:**\n\`\`\`${commands.filter(command => command.b !== true).map(command => command.n).join(', ')}\`\`\`\nFor help with a specific command, type \`%help <command>\`!`);
         }
 
         const embed = new Discord.RichEmbed()
