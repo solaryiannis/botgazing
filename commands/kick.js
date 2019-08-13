@@ -34,7 +34,7 @@ module.exports = {
               }
             }
           }
-      if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) {
+      if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
         return message.channel.send("I don't have the permissions...").then(message => {
           message.delete(15000)
         });
@@ -52,13 +52,13 @@ module.exports = {
     .then(collected => {
         const reaction = collected.first();
         if (reaction.emoji.name === '✅') {
-          kickMember.kick(reason).then(member => {
+          member.kick(reason).then(member => {
             message.channel.send(`The kick against ${member.user.tag} was successful. Kick Reason: ${reason}`)
             });
-            kickMember.send(`${kickMember}, you have been kicked from ${message.guild}: ${reason}`).catch(console.error);
+            member.send(`${member}, you have been kicked from ${message.guild}: ${reason}`).catch(console.error);
           }
         else if (reaction.emoji.name === '❌') {
-          return message.channel.send(`The kick against ${kickMember.user.tag} was cancelled.`);
+          return message.channel.send(`The kick against ${member.user.tag} was cancelled.`);
         }
     })
     .catch(collected => {

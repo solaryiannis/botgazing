@@ -34,7 +34,7 @@ module.exports = {
               }
             }
           }
-      if(!message.guild.member(bot.user).hasPermission("BAN_MEMBERS")) {
+      if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
         return message.channel.send("I don't have the permissions...").then(message => {
           message.delete(15000)
         });
@@ -51,13 +51,13 @@ module.exports = {
       .then(collected => {
         const reaction = collected.first();
         if (reaction.emoji.name === '✅') {
-          banMember.ban(reason).then(member => {
+          member.ban(reason).then(member => {
             message.channel.send(`The ban against ${member.user.tag} was successful. Ban Reason: ${reason}`)
             });
-            banMember.send(`${banMember}, you have been banned from ${message.guild}: ${reason}`).catch(console.error);
+            member.send(`${member}, you have been banned from ${message.guild}: ${reason}`).catch(console.error);
           }
         else if (reaction.emoji.name === '❌') {
-          return message.channel.send(`The ban against ${banMember.user.tag} was cancelled.`);
+          return message.channel.send(`The ban against ${member.user.tag} was cancelled.`);
         }
     })
     .catch(collected => {
