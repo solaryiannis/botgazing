@@ -8,7 +8,7 @@ module.exports = {
 	b: false,
 	async execute(client, message, args) {
     if (!args) return message.channel.send(`Hey, you didn't tell me what you threw...`);
-    if (args[0] != "rock" || args[0] != "scissors" || args[0] != "paper") return message.channel.send(`Hey, you threw something invalid...`);
+    if (args[0] != "rock" && args[0] != "scissors" && args[0] != "paper") return message.channel.send(`Hey, you threw something invalid...`);
     
     var threw = args[0].toLowerCase();
     var botThrow = ["rock", "paper", "scissors"];
