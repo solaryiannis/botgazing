@@ -42,7 +42,7 @@ module.exports = {
       const filter = (reaction, user) => {
         return ['✅', '❌'].includes(reaction.emoji.name) && user.id === message.author.id;
     };
-    message.channel.send(`Would you like to ban ${message.mentions.users.first().tag}? Please react with ✅ if you confirm the ban, and ❌ if you cancel.`).then(message => {
+    message.channel.send(`Would you like to ban ${member.user.tag}? Please react with ✅ if you confirm the ban, and ❌ if you cancel.`).then(message => {
       message.delete(30000)
     });
       message.react("✅").catch(console.error);
