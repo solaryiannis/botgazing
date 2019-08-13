@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
       n: 'murder',
-      a: ['murder', 'dr', 'danganronpa', 'death', 'dead'],
+      a: ['murder', 'dr', 'danganronpa', 'death', 'dead', 'm'],
         d: 'Visualize your potential Killing Game murder and suicide attempts!',
         u: '%murder',
         b: false,
