@@ -27,21 +27,21 @@ module.exports = {
           user = member.user;
 
         var room = [];
-        room [0] = `The Armoury`;
-        room [1] = `The Tavern`;
-        room [2] = `The Kitchen`;
-        room [3] = `The Wardrobe`;
-        room [4] = `The Dining Room`;
-        room [5] = `The Garden`;
-        room [6] = `The Washroom`;
-        room [7] = `The Art Studio`;
-        room [8] = `The Observatory`;
-        room [9] = `The Parlour`;
-        room [10] = `The Cellar`;
-        room [11] = `The Roof`;
-        room [12] = `The Rec Room`;
-        room [13] = `The Astral Hall`;
-        room [14] = `The Foyer`;
+        room [0] = `in The Armoury`;
+        room [1] = `in The Tavern`;
+        room [2] = `in The Kitchen`;
+        room [3] = `in The Wardrobe`;
+        room [4] = `in The Dining Room`;
+        room [5] = `in The Garden`;
+        room [6] = `in The Washroom`;
+        room [7] = `in The Art Studio`;
+        room [8] = `in The Observatory`;
+        room [9] = `in The Parlour`;
+        room [10] = `in The Cellar`;
+        room [11] = `on The Roof`;
+        room [12] = `in The Rec Room`;
+        room [13] = `in The Astral Hall`;
+        room [14] = `in The Foyer`;
         var a = Math.round(Math.random() * 14);
     
         var ult = [];
@@ -124,6 +124,6 @@ module.exports = {
         condition [15] = `covered in glass shards and smelling of onion`;
         var i = Math.round(Math.random() * 15);
         
-        message.channel.send(`**Attention, members of ${message.guild.name}! A BODY HAS BEEN DISCOVERED!!!!**\n${user.username} was found dead in ${room[a]}. They were the **Ultimate ${ult[b]}**!\nTheir body is ${condition[i]}, with a ${mark[f]} to their ${body[c]}, ${mark[g]} to their ${body[d]}, and ${mark[h]} to their ${body[e]}.`);
+        message.channel.send(`**Attention, members of ${message.guild.name}! A BODY HAS BEEN DISCOVERED!!!!**\n${user.username} was found dead ${room[a]}. They were the **Ultimate ${ult[b]}**!\nTheir body is ${condition[i]}, with a ${mark[f]} to their ${body[c]}, ${mark[g]} to their ${body[d]}, and ${mark[h]} to their ${body[e]}.`);
       },
     };
