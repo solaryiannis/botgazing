@@ -11,12 +11,26 @@ module.exports = {
     if(!reason) reason = "Reason left blank";
   
     if (!message.member.hasPermission("KICK_MEMBERS") || !message.member.hasPermission("BAN_MEMBERS")) return;
-    let warnMember = (message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]));
-    if(!warnMember || message.mentions.users.size === 0) return;
+    var member;
+          member = message.mentions.members.first();
+          if (!member) {
+            member = message.guild.members.get(args[0]);
+            if (!member)
+            {
+              member = message.guild.members.find(m => m.user.username === args.join(" "));
+              if (!member) {
+                member = message.guild.members.find(m => m.displayName === args.join(" "));
+                if (!member) {
+                    member = message.guild.members.find(m => m.user.tag === args.join(" "));
+                    if (!member) return;
+                }  
+              }
+            }
+          }
     if(!message.guild.member(client.user).hasPermission("KICK_MEMBERS") || !message.guild.member(client.user).hasPermission("BAN_MEMBERS")) return;
   
       message.delete(1).catch(console.error);
-      warnMember.send(`${warnMember}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
-      message.author.send(`${message.mentions.users.first().tag} (${warnMember.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
+      member.send(`${member}, you have been warned for your behaviour in ${message.guild}: ${reason}`).catch(console.error);
+      message.author.send(`${message.mentions.users.first().tag} (${member.id}) was warned in ${message.guild}: ${reason}`).catch(console.error);
 	},
 };

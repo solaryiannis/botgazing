@@ -16,12 +16,24 @@ module.exports = {
           message.delete(15000)
         });
       }
-      let kickMember = (message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]));
-      if(!kickMember || message.mentions.users.size === 0) {
-        return message.channel.send("Please mention a user to kick.").then(message => {
-          message.delete(15000)
-        });
-      }
+      var member;
+          member = message.mentions.members.first();
+          if (!member) {
+            member = message.guild.members.get(args[0]);
+            if (!member)
+            {
+              member = message.guild.members.find(m => m.user.username === args.join(" "));
+              if (!member) {
+                member = message.guild.members.find(m => m.displayName === args.join(" "));
+                if (!member) {
+                    member = message.guild.members.find(m => m.user.tag === args.join(" "));
+                    if (!member) return message.channel.send("Please also type a user to kick.").then(message => {
+                      message.delete(15000)
+                    });
+                }  
+              }
+            }
+          }
       if(!message.guild.member(bot.user).hasPermission("KICK_MEMBERS")) {
         return message.channel.send("I don't have the permissions...").then(message => {
           message.delete(15000)
