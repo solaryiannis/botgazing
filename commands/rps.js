@@ -15,9 +15,9 @@ module.exports = {
     var botEmoji = [":fist:", ":raised_hand:", ":v:"];
     var i = Math.round(Math.random() * 2);
 
-    if (threw == "rock" && i = 1) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
-    else if (threw == "paper" && i = 2) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
-    else if (threw == "scissors" && i = 0) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
+    if (threw == "rock" && i == 1) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
+    else if (threw == "paper" && i == 2) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
+    else if (threw == "scissors" && i == 0) return message.channel.send(`Yay! I threw **${botThrow[i]}**. ${botEmoji[i]} That means I win!!`);
     else if (threw == botThrow [i]) return message.channel.send(`Hm, I threw **${botThrow[i]}**. ${botEmoji[i]} We tied.`);
     else return message.channel.send(`Aw, I threw **${botThrow[i]}**. ${botEmoji[i]} I didn't win...`);
 },
