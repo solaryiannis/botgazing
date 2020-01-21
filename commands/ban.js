@@ -18,22 +18,14 @@ module.exports = {
       }
       var member;
           member = message.mentions.members.first();
-          if (!member) {
-            member = message.guild.members.get(args[0]);
-            if (!member)
-            {
-              member = message.guild.members.find(m => m.user.username === args.join(" "));
-              if (!member) {
-                member = message.guild.members.find(m => m.displayName === args.join(" "));
-                if (!member) {
-                    member = message.guild.members.find(m => m.user.tag === args.join(" "));
-                    if (!member) return message.channel.send("Please also type a user to ban.").then(message => {
+          if (!member)  member = message.guild.members.get(args[0]);
+            else if (!member) member = message.guild.members.find(m => m.user.username === args.join(" "));
+              else if (!member) member = message.guild.members.find(m => m.displayName === args.join(" "));
+                else if (!member) member = message.guild.members.find(m => m.user.tag === args.join(" "));
+                    else if (!member) return message.channel.send("Please also type a user to ban.").then(message => {
                       message.delete(15000)
                     });
-                }  
-              }
-            }
-          }
+
       if(!message.guild.member(client.user).hasPermission("BAN_MEMBERS")) {
         return message.channel.send("I don't have the permissions...").then(message => {
           message.delete(15000)

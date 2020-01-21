@@ -9,21 +9,13 @@ module.exports = {
 	async execute(client, message, args) {
     var member;
     var user;
+    
     member = message.mentions.members.first();
-    if (!member) {
-      member = message.guild.members.get(args[0]);
-      if (!member)
-      {
-        member = message.guild.members.find(m => m.user.username === args.join(" "));
-        if (!member) {
-          member = message.guild.members.find(m => m.displayName === args.join(" "));
-          if (!member) {
-              member = message.guild.members.find(m => m.user.tag === args.join(" "));
-              if (!member) member = message.member;
-          }  
-        }
-      }
-    }
+    if (!member) member = message.guild.members.get(args[0]);
+      else if (!member) member = message.guild.members.find(m => m.user.username === args.join(" "));
+        else if (!member) member = message.guild.members.find(m => m.displayName === args.join(" "));
+          else if (!member) member = message.guild.members.find(m => m.user.tag === args.join(" "));
+            else if (!member) member = message.member;
     user = member.user;
     
     const embed = new Discord.RichEmbed()
