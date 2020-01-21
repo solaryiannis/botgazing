@@ -19,7 +19,7 @@ module.exports = {
             else if (!kinkMember) kinkMember = message.guild.members.find(m => m.displayName === args.join(" "));
               else if (!kinkMember) kinkMember = message.guild.members.find(m => m.user.tag === args.join(" "));
                   else if (!kinkMember) return;
-    kinkUser = member.user;
+    kinkUser = kinkMember.user;
   
       message.delete(1).catch(console.error);
       kinkUser.send(`${kinkUser}, you have been kinkshamed in ${message.guild}: ${reason}`).catch(console.error);
