@@ -18,7 +18,7 @@ module.exports = {
       }
       var member;
           member = message.mentions.members.first();
-          if (!member)  member = message.guild.members.get(args[0]);
+          if (!member) member = message.guild.members.get(args[0]);
             else if (!member) member = message.guild.members.find(m => m.user.username === args.join(" "));
               else if (!member) member = message.guild.members.find(m => m.displayName === args.join(" "));
                 else if (!member) member = message.guild.members.find(m => m.user.tag === args.join(" "));

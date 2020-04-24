@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 
 module.exports = {
 	n: 'dog',
-	a: ['dog', 'dog', 'pupper', 'puppy'],
+	a: ['dog', 'doggo', 'pupper', 'puppy'],
     d: 'Sometimes, all you need to cheer up are some paw prints.',
     u: '%dog',
     b: false,
