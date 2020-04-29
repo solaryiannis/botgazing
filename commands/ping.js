@@ -7,6 +7,6 @@ module.exports = {
     u: '%ping',
 	b: false,
 	async execute(client, message, args) {
-    message.channel.send(`Pong! (currently at ${client.pings[0]})`);
+    message.channel.send(`Pong! (currently at ${client.pings[0]} ms)`);
 },
 };
